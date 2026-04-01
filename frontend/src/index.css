@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   UNMAPPED — Design System Tokens
+   Palette: Ivory · Sand · Olive · Taupe · Gold
+   ============================================ */
+
+@layer base {
+  :root {
+    /* ── Core Surface ── */
+    --background:      37 42% 95%;   /* Warm ivory  #F5EFE4 */
+    --foreground:      28 22% 13%;   /* Deep charcoal */
+    --card:            37 38% 98%;   /* Near-white ivory */
+    --card-foreground: 28 22% 13%;
+    --popover:         37 38% 98%;
+    --popover-foreground: 28 22% 13%;
+
+    /* ── Brand Colors ── */
+    --primary:            86 22% 36%;  /* Olive green  #597250 */
+    --primary-foreground: 37 42% 95%; /* Ivory */
+    --primary-hover:      86 22% 30%; /* Darker olive on hover */
+
+    --secondary:            33 36% 82%; /* Sand #D9C8B0 */
+    --secondary-foreground: 28 22% 13%;
+
+    --accent:            36 42% 58%;  /* Muted gold  #C4A670 */
+    --accent-foreground: 28 22% 13%;
+
+    --muted:            34 25% 90%;  /* Pale sand */
+    --muted-foreground: 28 14% 48%;  /* Taupe  #8E7F6E */
+
+    /* ── States ── */
+    --destructive:            0 72% 51%;
+    --destructive-foreground: 37 42% 95%;
+
+    /* ── Borders & Inputs ── */
+    --border:  34 22% 86%;
+    --input:   34 22% 86%;
+    --ring:    36 42% 58%;  /* Gold focus ring */
+
+    /* ── Brand-Specific Tokens ── */
+    --ivory:         37 42% 95%;
+    --sand:          33 36% 82%;
+    --sand-light:    35 32% 90%;
+    --olive:         86 22% 36%;
+    --olive-light:   82 18% 48%;
+    --olive-dark:    86 26% 26%;
+    --taupe:         28 14% 50%;
+    --gold:          36 42% 58%;
+    --gold-light:    38 48% 70%;
+    --charcoal:      28 22% 13%;
+    --charcoal-soft: 28 16% 22%;
+
+    /* ── Gradients ── */
+    --gradient-hero-overlay: linear-gradient(
+      to bottom,
+      hsl(28 22% 13% / 0.15) 0%,
+      hsl(28 22% 13% / 0.55) 60%,
+      hsl(28 22% 13% / 0.72) 100%
+    );
+    --gradient-sand: linear-gradient(
+      135deg,
+      hsl(37 42% 95%) 0%,
+      hsl(33 36% 88%) 100%
+    );
+    --gradient-olive-dark: linear-gradient(
+      135deg,
+      hsl(86 26% 26%) 0%,
+      hsl(86 22% 36%) 100%
+    );
+    --gradient-section: linear-gradient(
+      180deg,
+      hsl(37 42% 95%) 0%,
+      hsl(33 36% 90%) 100%
+    );
+
+    /* ── Shadows ── */
+    --shadow-card:    0 2px 16px hsl(28 22% 13% / 0.07),
+                      0 1px 4px  hsl(28 22% 13% / 0.05);
+    --shadow-hover:   0 8px 32px hsl(28 22% 13% / 0.12),
+                      0 2px 8px  hsl(28 22% 13% / 0.07);
+    --shadow-gold:    0 4px 24px hsl(36 42% 58% / 0.22);
+    --shadow-olive:   0 4px 24px hsl(86 22% 36% / 0.22);
+
+    /* ── Typography ── */
+    --font-serif:  'Cormorant Garamond', Georgia, serif;
+    --font-sans:   'Inter', system-ui, sans-serif;
+    --font-mono:   'Source Code Pro', monospace;
+
+    /* ── Motion ── */
+    --transition-base:   200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* ── Spacing / Radius ── */
+    --radius: 0.375rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1.25rem;
+  }
+
+  /* Dark mode — not primary but accessible */
+  .dark {
+    --background:      28 22% 10%;
+    --foreground:      37 42% 92%;
+    --card:            28 20% 14%;
+    --card-foreground: 37 42% 92%;
+    --popover:         28 20% 14%;
+    --popover-foreground: 37 42% 92%;
+    --primary:            82 20% 52%;
+    --primary-foreground: 28 22% 10%;
+    --secondary:          28 16% 20%;
+    --secondary-foreground: 37 42% 92%;
+    --accent:            36 42% 58%;
+    --accent-foreground: 28 22% 10%;
+    --muted:            28 16% 18%;
+    --muted-foreground: 33 18% 60%;
+    --border:  28 16% 22%;
+    --input:   28 16% 22%;
+    --ring:    36 42% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* ============================================
+   GRAIN TEXTURE OVERLAY
+   ============================================ */
+.grain-overlay {
+  position: relative;
+}
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 160px 160px;
+  z-index: 1;
+}
+
+/* ============================================
+   GOLD DIVIDER
+   ============================================ */
+.gold-divider {
+  width: 3rem;
+  height: 1.5px;
+  background: hsl(var(--gold));
+  display: inline-block;
+}
+.gold-divider-center {
+  width: 3rem;
+  height: 1.5px;
+  background: hsl(var(--gold));
+  margin: 0 auto;
+}
+
+/* ============================================
+   SERIF HEADING UTILITY
+   ============================================ */
+.font-serif-heading {
+  font-family: var(--font-serif);
+}
+
+/* ============================================
+   SCROLL ANIMATION
+   ============================================ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.65s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+}
+.fade-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── staggered children ── */
+.stagger-children > * {
+  transition-delay: calc(var(--stagger-index, 0) * 0.08s);
+}
+
+/* ============================================
+   CARD HOVER
+   ============================================ */
+.card-hover {
+  transition: box-shadow var(--transition-smooth),
+              transform var(--transition-smooth);
+}
+.card-hover:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   HERO PARALLAX HELPER
+   ============================================ */
+.hero-parallax-img {
+  will-change: transform;
+}
+
+/* ============================================
+   THIN LETTER SPACING HEADINGS
+   ============================================ */
+.tracking-editorial {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+}
+
+/* ============================================
+   CTA BUTTON PULSE (urgency)
+   ============================================ */
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(36 42% 58% / 0.4); }
+  50%       { box-shadow: 0 0 0 8px hsl(36 42% 58% / 0); }
+}
+.btn-pulse {
+  animation: cta-pulse 2.4s ease-in-out infinite;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--taupe));
+  border-radius: 3px;
+}
+
+/* ============================================
+   SECTION PADDING UTILITY
+   ============================================ */
+.section-pad {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+@media (min-width: 768px) {
+  .section-pad {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* ============================================
+   IMAGE HOVER ZOOM
+   ============================================ */
+.img-zoom-wrap {
+  overflow: hidden;
+}
+.img-zoom-wrap img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.img-zoom-wrap:hover img {
+  transform: scale(1.04);
+}
+
+/* ============================================
+   DEBUG WRAPPER — do not remove
+   ============================================ */
+@layer base {
+  [data-debug-wrapper="true"] { display: contents !important; }
+  [data-debug-wrapper="true"] > * {
+    margin-left: inherit; margin-right: inherit;
+    margin-top: inherit;  margin-bottom: inherit;
+    padding-left: inherit; padding-right: inherit;
+    padding-top: inherit;  padding-bottom: inherit;
+    column-gap: inherit;   row-gap: inherit; gap: inherit;
+    border-left-width: inherit;  border-right-width: inherit;
+    border-top-width: inherit;   border-bottom-width: inherit;
+    border-left-style: inherit;  border-right-style: inherit;
+    border-top-style: inherit;   border-bottom-style: inherit;
+    border-left-color: inherit;  border-right-color: inherit;
+    border-top-color: inherit;   border-bottom-color: inherit;
+  }
+}
