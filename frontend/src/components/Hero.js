@@ -56,7 +56,7 @@ export const Hero = () => {
           style={{ color: 'rgba(245, 240, 228, 0.95)', animationDelay: '0.4s' }}>
 
           Unmapped helps solo travelers, couples, and small groups plan more
-          meaningful trips &mdash; with AI-powered planning and human curation.
+          meaningful trips with AI-powered planning and human curation.
         </p>
 
         {/* Trust cue */}
@@ -81,13 +81,13 @@ export const Hero = () => {
 
             Reserve your spot
           </Button>
-          <Button
+          {/* <Button
             variant="ghost-light"
             size="lg"
             onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}>
 
             Join early access
-          </Button>
+          </Button> */}
         </div>
 
         <p

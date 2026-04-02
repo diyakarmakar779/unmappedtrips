@@ -5,7 +5,7 @@ const pillars = [
     icon: Zap,
     label: 'AI-powered',
     title: 'Plans faster than any human researcher',
-    desc: 'AI processes hundreds of travel signals — routes, seasons, budgets, local nuances — to draft a strong starting point in seconds.',
+    desc: 'AI processes hundreds of travel signals — routes, seasons, budgets, local nuances to draft a strong starting point in seconds.',
   },
   {
     icon: User,
@@ -17,7 +17,7 @@ const pillars = [
     icon: Brain,
     label: 'Personalised',
     title: 'Calibrated to your specific trip',
-    desc: 'Budget flow, pacing, hidden spots, dietary preferences, travel style — the plan adapts to who you are, not who the average traveler is.',
+    desc: 'Budget flow, pacing, hidden spots, dietary preferences, travel style, the plan adapts to who you are, not who the average traveler is.',
   },
 ];
 
@@ -45,7 +45,7 @@ export const SoftAI = () => {
           </div>
           <div className="fade-right">
             <p className="font-sans text-base text-muted-foreground leading-relaxed">
-              We don't hide the technology behind Unmapped — we just keep it
+              We don't hide the technology behind Unmapped we just keep it
               where it belongs: in the background. What you receive is a human
               experience, backed by intelligent planning.
             </p>

@@ -51,14 +51,14 @@ export const FinalCTA = () => {
             >
               Reserve your spot
             </Button>
-            <Button
+            {/* <Button
               variant="sand"
               size="lg"
               onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
               className="w-full sm:w-auto"
             >
               Join early access
-            </Button>
+            </Button> */}
           </div>
 
           <p className="mt-4 font-sans text-xs text-muted-foreground">

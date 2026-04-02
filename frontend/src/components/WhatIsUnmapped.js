@@ -49,7 +49,7 @@ export const WhatIsUnmapped = () => {
 
             <p className="font-sans text-base text-muted-foreground leading-relaxed">
               Travel planning today is noisy, generic, and fragmented. Unmapped
-              replaces that with one curated plan — tailored to your destination,
+              replaces that with one curated plan, tailored to your destination,
               your travel style, and what actually matters to you.
             </p>
 

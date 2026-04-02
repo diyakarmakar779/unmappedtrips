@@ -33,9 +33,9 @@ export const Footer = () => {
             {/* Social */}
             <div className="flex items-center gap-3 mt-1">
               {[
-                { icon: Instagram, label: 'Instagram', href: '#' },
-                { icon: MessageCircle, label: 'WhatsApp', href: '#' },
-                { icon: Mail, label: 'Email', href: 'mailto:hello@unmapped.in' },
+                { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/unmapped.travel_/' },
+                // { icon: MessageCircle, label: 'WhatsApp', href: '#' },
+                // { icon: Mail, label: 'Email', href: 'mailto:hello@unmapped.in' },
               ].map((social) => {
                 const Icon = social.icon;
                 return (

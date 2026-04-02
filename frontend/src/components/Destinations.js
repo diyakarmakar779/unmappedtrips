@@ -50,7 +50,7 @@ export const Destinations = () => {
             </h2>
           </div>
           <p className="fade-up font-sans text-sm text-muted-foreground max-w-xs leading-relaxed md:text-right">
-            We are starting with the destinations we know best — where our
+            We are starting with the destinations we know best, where our
             curation is deepest and our local access is trusted.
           </p>
         </div>
