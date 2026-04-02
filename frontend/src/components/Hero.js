@@ -29,7 +29,7 @@ export const Hero = () => {
       </div>
 
       {/* ── Hero Content ── */}
-      <div className="relative z-10 flex flex-col justify-end flex-1 max-w-6xl mx-auto w-full px-6 md:px-10 pb-20 md:pb-28">
+      <div className="relative z-10 flex flex-col justify-end flex-1 max-w-6xl mx-auto w-full px-6 md:px-10 pt-20 pb-20 md:pb-28">
 
         {/* Eyebrow */}
         <div className="animate-fade-in" style={{ animationDelay: '0.15s' }}>
