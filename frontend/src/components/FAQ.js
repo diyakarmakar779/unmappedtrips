@@ -7,28 +7,28 @@ import {
 
 const faqs = [
   {
-    q: 'Is this free?',
-    a: 'Yes — for early access members, the first trip customization is completely free. Once we open to the public, plans will be available at a small fee. Early access locks in free access for your first trip.',
+    q: 'Is Unmapped live yet?',
+    a: 'Unmapped is currently in early access. We are onboarding our first 50 users to refine the experience before opening to the public. Reserving your spot now means you get free trip customization and a founder-reviewed itinerary.',
   },
   {
-    q: 'How do I receive my plan?',
-    a: "After you fill in your travel details, we'll send your itinerary directly to you — via WhatsApp or email, whichever you prefer. It'll be a clean, readable document you can refer to on your trip.",
+    q: 'What do early users get?',
+    a: 'The first 50 users receive: free trip customization for their first trip, a founder-reviewed itinerary, and priority access to new curated trip drops and destinations as we expand. Once 50 spots are filled, these perks end and pricing goes live.',
   },
   {
-    q: 'Will someone contact me?',
-    a: 'Yes. Once you submit the form, our team will reach out on WhatsApp within 24–48 hours to confirm details and answer any questions before we start building your plan.',
+    q: 'Is this an AI travel app?',
+    a: 'Not exactly. Unmapped uses AI to power the planning process — routes, budgets, itinerary drafting — but every plan is reviewed and refined by a human curator before it reaches you. Think of it as a travel concierge that uses smart technology behind the scenes, not a chatbot you interact with.',
   },
   {
-    q: 'Do you handle bookings?',
-    a: 'Currently, Unmapped focuses on planning — we give you the perfect plan, and you book at your own pace. We do include direct links and recommendations to make bookings easier. Booking support may come later.',
+    q: 'Which destinations are you starting with?',
+    a: 'We are starting with Meghalaya and Sikkim — two of the most culturally rich and visually stunning destinations in India that are chronically underplanned by most travelers. More destinations will follow. Early users help us decide where next.',
   },
   {
-    q: 'Is Unmapped only for India trips?',
-    a: "For now, yes. We're starting with Northeast India — Meghalaya and Sikkim — before expanding to more destinations. India has so much unexplored territory, we want to get this right first.",
+    q: 'How does the early-access process work?',
+    a: 'Fill in the short early-access form (takes about 2 minutes). Our team will reach out on WhatsApp within 24–48 hours to learn more about your travel plans. We will then craft and deliver a curated itinerary tailored to your trip.',
   },
   {
-    q: 'Can I use it for family or spiritual travel?',
-    a: 'Absolutely. We design plans for solo travelers, couples, small groups, families, and spiritual journeys. Just let us know your travel style when you fill the form.',
+    q: 'Do you plan trips for families and spiritual travelers?',
+    a: 'Yes — while our primary focus is solo travelers, couples, and small groups, we plan trips for families and spiritual journeys too. Just mention your travel style in the form and we will design accordingly.',
   },
 ];
 
@@ -52,8 +52,8 @@ export const FAQ = () => {
               <em>usually ask.</em>
             </h2>
             <p className="mt-5 font-sans text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Still have a question? We'll answer on WhatsApp — just reserve your
-              spot and mention it in the form.
+              Still have a question? Mention it in the early-access form and
+              we will answer personally on WhatsApp.
             </p>
           </div>
 

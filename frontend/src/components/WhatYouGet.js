@@ -4,32 +4,32 @@ const features = [
   {
     icon: Map,
     title: 'Day-wise itinerary',
-    desc: 'A structured, day-by-day plan that flows naturally — no rushed jumps or wasted travel time.',
+    desc: 'A structured, concept-led plan that flows naturally — no rushed jumps or wasted travel time.',
   },
   {
     icon: Bed,
     title: 'Stay recommendations',
-    desc: 'Handpicked stays that match your vibe — boutique, budget, or somewhere in between.',
+    desc: 'Handpicked stays that match your vibe — boutique guesthouses, homestays, or hidden gems.',
   },
   {
     icon: Coffee,
-    title: 'Hidden cafes & local experiences',
-    desc: "The spots that aren't on every travel blog. Local food, quiet corners, real culture.",
+    title: 'Local cafes & experiences',
+    desc: "The spots that aren't on every travel blog — local food, quiet corners, and real cultural immersion.",
   },
   {
     icon: Wallet,
     title: 'Budget breakdown',
-    desc: 'A clear estimate of what to expect — so you can plan without nasty surprises.',
+    desc: 'A clear estimate of what to expect across stays, transport, and experiences — no nasty surprises.',
   },
   {
     icon: Lightbulb,
-    title: 'Travel tips & suggestions',
-    desc: "What to pack, what to skip, when to go — practical advice from people who've been.",
+    title: 'Curated travel tips',
+    desc: "What to pack, what to avoid, when to go — practical advice from people who've actually been.",
   },
   {
     icon: Navigation,
-    title: 'Route optimization',
-    desc: 'The smartest way to get from A to B, whether by road, rail, or air.',
+    title: 'Hidden route concepts',
+    desc: 'Scenic slow routes, cultural deep dives, and off-the-beaten-path concepts built into your plan.',
   },
 ];
 
@@ -48,13 +48,13 @@ export const WhatYouGet = () => {
           </span>
           <div className="gold-divider mt-3 mb-5" />
           <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground leading-snug">
-            Everything you need.
+            One complete plan.
             <br />
-            <em>Nothing you don't.</em>
+            <em>Ready to travel.</em>
           </h2>
           <p className="mt-4 font-sans text-base text-muted-foreground leading-relaxed">
-            Every Unmapped plan is built around your travel style — not a
-            copy-paste template.
+            Every Unmapped plan is a single, cohesive document — no links to
+            follow, no decisions left unmade.
           </p>
         </div>
 

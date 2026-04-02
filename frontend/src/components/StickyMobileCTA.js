@@ -1,7 +1,6 @@
 import { Button } from './ui/button';
 import { useState, useEffect } from 'react';
-
-const GOOGLE_FORM_URL = 'https://forms.gle/unmapped-early-access';
+import { GOOGLE_FORM_URL, CTA_MICROCOPY } from '../constants';
 
 export const StickyMobileCTA = () => {
   const [visible, setVisible] = useState(false);
@@ -35,7 +34,7 @@ export const StickyMobileCTA = () => {
           Reserve your spot
         </Button>
         <p className="font-sans text-xs text-center" style={{ color: 'hsl(var(--primary-foreground) / 0.4)' }}>
-          Takes 30 seconds. We'll reach out on WhatsApp.
+          {CTA_MICROCOPY}
         </p>
       </div>
     </div>

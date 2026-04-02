@@ -1,6 +1,20 @@
 import { Button } from './ui/button';
+import { GOOGLE_FORM_URL, CTA_MICROCOPY } from '../constants';
 
-const GOOGLE_FORM_URL = 'https://forms.gle/unmapped-early-access';
+const problems = [
+  {
+    title: 'Most travel planning feels generic',
+    desc: 'Copy-pasted blogs, rushed timelines, and places you could have found on any Instagram reel.',
+  },
+  {
+    title: 'Fragmented and exhausting',
+    desc: 'Dozens of tabs, contradictory advice, and no clear plan — before the trip even starts.',
+  },
+  {
+    title: 'Unmapped is the alternative',
+    desc: 'Thoughtfully planned, culturally rich, concept-led trips designed around how you travel.',
+  },
+];
 
 export const WhatIsUnmapped = () => {
   return (
@@ -16,7 +30,7 @@ export const WhatIsUnmapped = () => {
             <img
               src="https://images.pexels.com/photos/4429619/pexels-photo-4429619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
               alt="Solo traveler in India"
-              className="w-full h-80 md:h-[480px] object-cover"
+              className="w-full h-80 md:h-[500px] object-cover"
             />
           </div>
 
@@ -28,26 +42,19 @@ export const WhatIsUnmapped = () => {
             <div className="gold-divider" />
 
             <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground leading-snug">
-              Your trip, end-to-end.
+              Not a travel app.
               <br />
-              <em>No tabs. No confusion.</em>
+              <em>A travel concierge.</em>
             </h2>
 
-            <div className="space-y-4">
-              {[
-                {
-                  title: 'We plan your trip end-to-end',
-                  desc: 'From the first day to the last — stays, routes, experiences, and backup plans.',
-                },
-                {
-                  title: 'No multiple tabs, no confusion',
-                  desc: 'One clear, ready-to-follow plan delivered straight to you.',
-                },
-                {
-                  title: 'You get a plan you can actually use',
-                  desc: 'Day-wise, readable, and tuned for how you like to travel.',
-                },
-              ].map((item, i) => (
+            <p className="font-sans text-base text-muted-foreground leading-relaxed">
+              Travel planning today is noisy, generic, and fragmented. Unmapped
+              replaces that with one curated plan — tailored to your destination,
+              your travel style, and what actually matters to you.
+            </p>
+
+            <div className="space-y-5 mt-1">
+              {problems.map((item, i) => (
                 <div key={i} className="flex gap-4">
                   <span className="mt-1 shrink-0 w-5 h-5 rounded-full bg-accent/20 border border-accent flex items-center justify-center">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent" />
@@ -60,21 +67,23 @@ export const WhatIsUnmapped = () => {
               ))}
             </div>
 
-            {/* AI subtle line */}
-            <p className="font-sans text-xs text-muted-foreground italic border-l-2 border-accent pl-3">
-              Powered by AI, refined by real travel experience.
+            {/* Positioning line */}
+            <p className="font-sans text-xs text-muted-foreground italic border-l-2 border-accent pl-3 mt-1">
+              AI-powered planning. Human-curated trips. Meaningful travel, not generic itineraries.
             </p>
 
-            <Button
-              variant="earthy"
-              onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-              className="w-fit mt-2"
-            >
-              Get early access
-            </Button>
-            <p className="text-xs text-muted-foreground -mt-2">
-              Takes 30 seconds. We'll reach out on WhatsApp.
-            </p>
+            <div className="flex flex-col gap-2 mt-2">
+              <Button
+                variant="earthy"
+                onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
+                className="w-fit"
+              >
+                Join early access
+              </Button>
+              <p className="text-xs text-muted-foreground">
+                {CTA_MICROCOPY}
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Menu, X } from 'lucide-react';
-
-const GOOGLE_FORM_URL = 'https://forms.gle/unmapped-early-access';
+import { GOOGLE_FORM_URL } from '../constants';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -54,9 +53,9 @@ export const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {[
-            { label: 'What you get', id: 'what-you-get' },
             { label: 'How it works', id: 'how-it-works' },
             { label: 'Destinations', id: 'destinations' },
+            { label: 'Our approach', id: 'our-approach' },
           ].map((item) => (
             <button
               key={item.id}
@@ -95,10 +94,11 @@ export const Navbar = () => {
         <div className="md:hidden absolute top-16 left-0 right-0 bg-card border-b border-border shadow-hover animate-fade-in">
           <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col gap-5">
             {[
-              { label: 'What you get', id: 'what-you-get' },
               { label: 'How it works', id: 'how-it-works' },
               { label: 'Destinations', id: 'destinations' },
+              { label: 'Our approach', id: 'our-approach' },
               { label: 'Early access', id: 'early-access' },
+              { label: 'FAQ', id: 'faq' },
             ].map((item) => (
               <button
                 key={item.id}
@@ -118,8 +118,8 @@ export const Navbar = () => {
             >
               Reserve your spot
             </Button>
-            <p className="text-xs text-muted-foreground text-center -mt-1">
-              Takes 30 seconds. We'll reach out on WhatsApp.
+            <p className="font-sans text-xs text-muted-foreground text-center -mt-1">
+              You'll be redirected to a quick early-access form.
             </p>
           </div>
         </div>

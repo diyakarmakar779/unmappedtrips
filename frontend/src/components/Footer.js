@@ -1,6 +1,5 @@
 import { Instagram, MessageCircle, Mail } from 'lucide-react';
-
-const GOOGLE_FORM_URL = 'https://forms.gle/unmapped-early-access';
+import { GOOGLE_FORM_URL } from '../constants';
 
 export const Footer = () => {
   const year = new Date().getFullYear();

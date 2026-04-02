@@ -1,32 +1,27 @@
 import { Button } from './ui/button';
 import { Star, Users, ShieldCheck } from 'lucide-react';
-import { useState, useEffect } from 'react';
-
-const GOOGLE_FORM_URL = 'https://forms.gle/unmapped-early-access';
-const TOTAL_SPOTS = 50;
+import { GOOGLE_FORM_URL, CTA_MICROCOPY, TOTAL_SPOTS, SPOTS_CLAIMED } from '../constants';
 
 const perks = [
   {
     icon: Star,
     title: 'Free trip customization',
-    desc: 'Your first itinerary is completely free — no strings, no catches.',
+    desc: 'Your first curated trip plan is completely free — no payment, no commitment, no fine print.',
   },
   {
     icon: ShieldCheck,
     title: 'Founder-reviewed itineraries',
-    desc: 'Every early-access plan is personally reviewed before it reaches you.',
+    desc: 'Every early-access plan is personally reviewed and refined before it reaches you.',
   },
   {
     icon: Users,
-    title: 'Priority access',
-    desc: 'Early members always get first access to new destinations and features.',
+    title: 'Priority access to curated drops',
+    desc: 'Early members get first access to new destinations, seasonal trip concepts, and curated experiences.',
   },
 ];
 
 export const EarlyAccess = () => {
-  const [claimed, setClaimed] = useState(23); // simulate filled spots
-
-  const percent = Math.round((claimed / TOTAL_SPOTS) * 100);
+  const percent = Math.round((SPOTS_CLAIMED / TOTAL_SPOTS) * 100);
 
   return (
     <section
@@ -34,16 +29,20 @@ export const EarlyAccess = () => {
       className="section-pad grain-overlay relative overflow-hidden"
       style={{ background: 'hsl(var(--charcoal))' }}
     >
-      {/* Decorative gold accent circle */}
+      {/* Decorative accent orbs */}
       <div
-        className="absolute -top-32 -right-32 w-96 h-96 rounded-full pointer-events-none"
-        style={{ background: 'hsl(var(--gold) / 0.06)' }}
+        className="absolute -top-28 -right-28 w-96 h-96 rounded-full pointer-events-none"
+        style={{ background: 'hsl(var(--gold) / 0.05)' }}
+      />
+      <div
+        className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full pointer-events-none"
+        style={{ background: 'hsl(var(--olive) / 0.08)' }}
       />
 
       <div className="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
         <div className="max-w-2xl mx-auto text-center fade-up">
           <span className="tracking-editorial" style={{ color: 'hsl(var(--gold))' }}>
-            Limited offer
+            Early access
           </span>
           <div className="gold-divider-center mt-3 mb-5" />
 
@@ -53,22 +52,22 @@ export const EarlyAccess = () => {
             <em>first 50.</em>
           </h2>
 
-          <p className="mt-5 font-sans text-base leading-relaxed" style={{ color: 'hsl(var(--primary-foreground) / 0.65)' }}>
-            We're onboarding a small founding group to shape how Unmapped works.
-            Once 50 spots are filled, pricing goes live.
+          <p className="mt-5 font-sans text-base leading-relaxed" style={{ color: 'hsl(var(--primary-foreground) / 0.62)' }}>
+            We're opening a founding group of 50 travelers to shape how Unmapped
+            works. Once those spots are filled, free access ends and pricing goes live.
           </p>
 
           {/* Progress bar */}
-          <div className="mt-8 px-4">
-            <div className="flex justify-between mb-2">
-              <span className="font-sans text-xs" style={{ color: 'hsl(var(--primary-foreground) / 0.5)' }}>
-                {claimed} spots claimed
+          <div className="mt-9 px-2">
+            <div className="flex justify-between mb-2.5">
+              <span className="font-sans text-xs" style={{ color: 'hsl(var(--primary-foreground) / 0.45)' }}>
+                {SPOTS_CLAIMED} spots claimed
               </span>
               <span className="font-sans text-xs font-semibold text-gold">
-                {TOTAL_SPOTS - claimed} left
+                {TOTAL_SPOTS - SPOTS_CLAIMED} remaining
               </span>
             </div>
-            <div className="h-1.5 rounded-full" style={{ background: 'hsl(var(--primary-foreground) / 0.12)' }}>
+            <div className="h-1.5 rounded-full overflow-hidden" style={{ background: 'hsl(var(--primary-foreground) / 0.1)' }}>
               <div
                 className="h-full rounded-full transition-all duration-700"
                 style={{
@@ -87,23 +86,23 @@ export const EarlyAccess = () => {
             return (
               <div
                 key={i}
-                className="fade-up flex flex-col gap-3 rounded-xl p-7 border"
+                className="fade-up flex flex-col gap-4 rounded-xl p-7 border"
                 style={{
                   background: 'hsl(var(--primary-foreground) / 0.04)',
-                  borderColor: 'hsl(var(--primary-foreground) / 0.1)',
+                  borderColor: 'hsl(var(--primary-foreground) / 0.09)',
                   transitionDelay: `${i * 0.1}s`,
                 }}
               >
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style={{ background: 'hsl(var(--gold) / 0.15)', border: '1px solid hsl(var(--gold) / 0.3)' }}
+                  style={{ background: 'hsl(var(--gold) / 0.14)', border: '1px solid hsl(var(--gold) / 0.28)' }}
                 >
                   <Icon size={18} className="text-gold" />
                 </div>
                 <h3 className="font-serif text-xl font-medium text-primary-foreground">
                   {perk.title}
                 </h3>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: 'hsl(var(--primary-foreground) / 0.6)' }}>
+                <p className="font-sans text-sm leading-relaxed" style={{ color: 'hsl(var(--primary-foreground) / 0.58)' }}>
                   {perk.desc}
                 </p>
               </div>
@@ -121,10 +120,10 @@ export const EarlyAccess = () => {
           >
             Reserve your spot
           </Button>
-          <p className="font-sans text-xs" style={{ color: 'hsl(var(--primary-foreground) / 0.45)' }}>
-            Takes 30 seconds. We'll reach out on WhatsApp.
+          <p className="font-sans text-xs" style={{ color: 'hsl(var(--primary-foreground) / 0.42)' }}>
+            {CTA_MICROCOPY}
           </p>
-          <p className="font-sans text-xs font-medium" style={{ color: 'hsl(var(--gold))' }}>
+          <p className="font-sans text-xs font-medium mt-1" style={{ color: 'hsl(var(--gold))' }}>
             Limited spots. Once filled, pricing goes live.
           </p>
         </div>

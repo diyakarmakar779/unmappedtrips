@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
 import { WhatIsUnmapped } from '../components/WhatIsUnmapped';
 import { WhatYouGet } from '../components/WhatYouGet';
 import { HowItWorks } from '../components/HowItWorks';
 import { WhyDifferent } from '../components/WhyDifferent';
+import { SoftAI } from '../components/SoftAI';
 import { Destinations } from '../components/Destinations';
 import { EarlyAccess } from '../components/EarlyAccess';
 import { FAQ } from '../components/FAQ';
@@ -14,7 +14,6 @@ import { StickyMobileCTA } from '../components/StickyMobileCTA';
 import { useScrollAnimation } from '../hooks/useIntersectionObserver';
 
 export default function LandingPage() {
-  // Run scroll animations after every render / route change
   useScrollAnimation();
 
   return (
@@ -25,6 +24,7 @@ export default function LandingPage() {
       <WhatYouGet />
       <HowItWorks />
       <WhyDifferent />
+      <SoftAI />
       <Destinations />
       <EarlyAccess />
       <FAQ />

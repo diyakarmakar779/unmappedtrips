@@ -1,7 +1,6 @@
 import { Button } from './ui/button';
-import { ArrowDown, Sparkles } from 'lucide-react';
-
-const GOOGLE_FORM_URL = 'https://forms.gle/unmapped-early-access';
+import { ArrowDown, MapPin } from 'lucide-react';
+import { GOOGLE_FORM_URL, CTA_MICROCOPY } from '../constants';
 
 export const Hero = () => {
   const scrollToNext = () => {
@@ -14,57 +13,60 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.pexels.com/photos/9332620/pexels-photo-9332620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          alt="Misty mountains of India"
+          alt="Misty mountains of Northeast India"
           className="w-full h-full object-cover hero-parallax-img"
         />
-        {/* Warm dark overlay for text contrast */}
+        {/* Layered overlay: bottom-heavy for text contrast */}
         <div
           className="absolute inset-0"
           style={{ background: 'var(--gradient-hero-overlay)' }}
         />
       </div>
 
-      {/* ── Content ── */}
+      {/* ── Hero Content ── */}
       <div className="relative z-10 flex flex-col justify-end flex-1 max-w-6xl mx-auto w-full px-6 md:px-10 pb-20 md:pb-28">
+
         {/* Eyebrow */}
-        <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <span className="tracking-editorial text-primary-foreground/70">
-            Curated travel for India
+        <div className="animate-fade-in" style={{ animationDelay: '0.15s' }}>
+          <span className="tracking-editorial text-primary-foreground/65">
+            Curated travel &middot; India
           </span>
         </div>
 
         {/* Main headline */}
         <h1
-          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-primary-foreground mt-4 leading-tight max-w-3xl animate-fade-in-up"
-          style={{ animationDelay: '0.3s' }}
+          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-light text-primary-foreground mt-5 leading-tight max-w-4xl animate-fade-in-up"
+          style={{ animationDelay: '0.25s' }}
         >
-          Plan your trip.
+          Concept trips.
           <br />
-          <em className="font-light">We'll make it better.</em>
+          Cultural deep dives.
+          <br />
+          <em className="font-light">Curated for how you travel.</em>
         </h1>
 
-        {/* Subtext */}
+        {/* Subheadline */}
         <p
-          className="mt-6 font-sans text-base md:text-lg text-primary-foreground/80 max-w-xl leading-relaxed animate-fade-in-up"
-          style={{ animationDelay: '0.5s' }}
+          className="mt-6 font-sans text-base md:text-lg text-primary-foreground/78 max-w-2xl leading-relaxed animate-fade-in-up"
+          style={{ animationDelay: '0.4s' }}
         >
-          Customized itineraries, stays, and experiences — thoughtfully planned
-          for how you travel.
+          Unmapped helps solo travelers, couples, and small groups plan more
+          meaningful trips — with AI-powered planning and human curation.
         </p>
 
         {/* Trust cue */}
         <p
-          className="mt-3 font-sans text-sm text-primary-foreground/60 flex items-center gap-2 animate-fade-in"
-          style={{ animationDelay: '0.65s' }}
+          className="mt-4 font-sans text-sm text-primary-foreground/58 flex items-center gap-2 animate-fade-in"
+          style={{ animationDelay: '0.55s' }}
         >
-          <Sparkles size={13} className="text-gold" />
-          Built by a travel creator who actually travels.
+          <MapPin size={13} className="text-gold shrink-0" />
+          Built by a travel creator with trusted local access in Meghalaya and Sikkim.
         </p>
 
         {/* CTA block */}
         <div
-          className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 animate-fade-in-up"
-          style={{ animationDelay: '0.75s' }}
+          className="mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-4 animate-fade-in-up"
+          style={{ animationDelay: '0.65s' }}
         >
           <Button
             variant="gold"
@@ -79,24 +81,25 @@ export const Hero = () => {
             size="lg"
             onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
           >
-            Get early access
+            Join early access
           </Button>
         </div>
+
         <p
-          className="mt-3 font-sans text-xs text-primary-foreground/55 animate-fade-in"
-          style={{ animationDelay: '0.9s' }}
+          className="mt-3 font-sans text-xs text-primary-foreground/50 animate-fade-in"
+          style={{ animationDelay: '0.8s' }}
         >
-          Takes 30 seconds. We'll reach out on WhatsApp.
+          {CTA_MICROCOPY}
         </p>
 
         {/* Urgency badge */}
         <div
-          className="mt-6 inline-flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-4 py-1.5 w-fit animate-fade-in"
-          style={{ animationDelay: '1s' }}
+          className="mt-7 inline-flex items-center gap-2.5 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/18 rounded-full px-4 py-2 w-fit animate-fade-in"
+          style={{ animationDelay: '0.95s' }}
         >
           <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-          <span className="font-sans text-xs text-primary-foreground/80 tracking-wide">
-            First 50 early access spots open
+          <span className="font-sans text-xs text-primary-foreground/78 tracking-wide">
+            First 50 early access spots — now open
           </span>
         </div>
       </div>
@@ -107,12 +110,12 @@ export const Hero = () => {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 group"
         aria-label="Scroll down"
       >
-        <span className="tracking-editorial text-primary-foreground/50 group-hover:text-primary-foreground/70 transition-colors duration-200">
-          Scroll
+        <span className="tracking-editorial text-primary-foreground/45 group-hover:text-primary-foreground/65 transition-colors duration-200">
+          Discover
         </span>
         <ArrowDown
           size={14}
-          className="text-primary-foreground/50 group-hover:text-primary-foreground/70 animate-bounce transition-colors duration-200"
+          className="text-primary-foreground/45 group-hover:text-primary-foreground/65 animate-bounce transition-colors duration-200"
         />
       </button>
     </section>
