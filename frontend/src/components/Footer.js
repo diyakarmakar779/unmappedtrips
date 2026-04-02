@@ -27,8 +27,7 @@ export const Footer = () => {
               </span>
             </div>
             <p className="font-sans text-sm leading-relaxed" style={{ color: 'hsl(var(--primary-foreground) / 0.55)' }}>
-              Curated travel planning powered by AI and refined by human insight.
-              Made for how India wants to travel.
+              Curated journeys across India powered by AI and refined by human insight.
             </p>
             {/* Social */}
             <div className="flex items-center gap-3 mt-1">
@@ -120,7 +119,7 @@ export const Footer = () => {
             © {year} Unmapped. All rights reserved.
           </p>
           <p className="font-sans text-xs" style={{ color: 'hsl(var(--primary-foreground) / 0.3)' }}>
-            Made with care for Indian travelers
+            Made with care for very journey
           </p>
         </div>
       </div>
