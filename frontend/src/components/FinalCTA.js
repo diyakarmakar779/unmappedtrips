@@ -10,15 +10,15 @@ export const FinalCTA = () => {
       {/* Decorative image strip with fade-out */}
       <div className="h-52 md:h-72 relative">
         <img
-          src="https://images.pexels.com/photos/35020489/pexels-photo-35020489.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          alt="India landscape"
+          src="https://images.unsplash.com/photo-1650884986695-d1e5cf90610f?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
+          alt="Emerald green valley India"
           className="w-full h-full object-cover object-top"
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom, hsl(var(--sand) / 0.1) 0%, hsl(var(--sand)) 90%)',
+              'linear-gradient(to bottom, hsl(var(--ivory) / 0.05) 0%, hsl(var(--ivory)) 90%)',
           }}
         />
       </div>

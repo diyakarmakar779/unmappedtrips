@@ -21,9 +21,9 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         /* ── Unmapped Brand Variants ── */
         earthy:
-          "bg-olive text-primary-foreground font-sans font-medium rounded-lg shadow-olive hover:shadow-hover transition-shadow transition-colors",
+          "bg-forest text-primary-foreground font-sans font-medium rounded-lg shadow-olive hover:shadow-hover transition-shadow transition-colors",
         gold:
-          "bg-accent text-accent-foreground font-sans font-semibold rounded-lg shadow-gold hover:shadow-hover transition-shadow transition-colors",
+          "bg-[hsl(var(--cta-green))] text-primary-foreground font-sans font-semibold rounded-lg hover:bg-[hsl(var(--cta-hover))] transition-colors shadow-olive",
         "ghost-light":
           "bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/25 font-sans font-medium rounded-lg backdrop-blur-sm hover:bg-primary-foreground/20 transition-colors",
         sand:

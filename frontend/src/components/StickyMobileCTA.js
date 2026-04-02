@@ -21,7 +21,7 @@ export const StickyMobileCTA = () => {
         visible ? 'translate-y-0' : 'translate-y-full'
       }`}
       style={{
-        background: 'hsl(var(--charcoal))',
+        background: 'hsl(var(--forest-deep))',
         borderTop: '1px solid hsl(var(--primary-foreground) / 0.1)',
       }}
     >

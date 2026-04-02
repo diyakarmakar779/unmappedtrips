@@ -28,8 +28,8 @@ export const WhatIsUnmapped = () => {
           {/* Left — image */}
           <div className="fade-left img-zoom-wrap rounded-xl overflow-hidden shadow-card">
             <img
-              src="https://images.pexels.com/photos/4429619/pexels-photo-4429619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt="Solo traveler in India"
+              src="https://images.unsplash.com/photo-1586078716042-46355c732f61?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
+              alt="Lush green misty hills"
               className="w-full h-80 md:h-[500px] object-cover"
             />
           </div>
@@ -72,7 +72,7 @@ export const WhatIsUnmapped = () => {
               AI-powered planning. Human-curated trips. Meaningful travel, not generic itineraries.
             </p>
 
-            <div className="flex flex-col gap-2 mt-2">
+            {/* <div className="flex flex-col gap-2 mt-2">
               <Button
                 variant="earthy"
                 onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
@@ -83,7 +83,7 @@ export const WhatIsUnmapped = () => {
               <p className="text-xs text-muted-foreground">
                 {CTA_MICROCOPY}
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

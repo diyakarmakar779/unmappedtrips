@@ -27,7 +27,7 @@ export const EarlyAccess = () => {
     <section
       id="early-access"
       className="section-pad grain-overlay relative overflow-hidden"
-      style={{ background: 'hsl(var(--charcoal))' }}
+      style={{ background: 'hsl(var(--forest-deep))' }}
     >
       {/* Decorative accent orbs */}
       <div

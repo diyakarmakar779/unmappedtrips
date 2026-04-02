@@ -24,13 +24,13 @@ export const WhyDifferent = () => {
     <section
       id="why-different"
       className="section-pad"
-      style={{ background: 'hsl(var(--olive-dark))' }}
+      style={{ background: 'hsl(var(--forest-deep))' }}
     >
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left: heading */}
           <div className="fade-left">
-            <span className="tracking-editorial" style={{ color: 'hsl(var(--gold-light))' }}>
+            <span className="tracking-editorial" style={{ color: 'hsl(var(--gold))' }}>
               Why Unmapped is different
             </span>
             <div className="gold-divider mt-3 mb-5" />

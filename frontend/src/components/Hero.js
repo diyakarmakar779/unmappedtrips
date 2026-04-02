@@ -12,14 +12,19 @@ export const Hero = () => {
       {/* ── Background Image ── */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.pexels.com/photos/9332620/pexels-photo-9332620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          alt="Misty mountains of Northeast India"
+          src="https://images.pexels.com/photos/12883589/pexels-photo-12883589.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          alt="Lush green misty forest of Northeast India"
           className="w-full h-full object-cover hero-parallax-img"
         />
-        {/* Layered overlay: bottom-heavy for text contrast */}
+        {/* Main bottom-up scrim — very dark where text lives */}
         <div
           className="absolute inset-0"
-          style={{ background: 'var(--gradient-hero-overlay)' }}
+          style={{ background: 'linear-gradient(to bottom, transparent 0%, hsl(120 33% 8% / 0.30) 30%, hsl(120 33% 8% / 0.70) 58%, hsl(120 33% 8% / 0.88) 100%)' }}
+        />
+        {/* Left-side vignette for additional text backdrop */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to right, hsl(120 33% 8% / 0.35) 0%, transparent 55%)' }}
         />
       </div>
 
@@ -47,19 +52,19 @@ export const Hero = () => {
 
         {/* Subheadline */}
         <p
-          className="mt-6 font-sans text-base md:text-lg text-primary-foreground/78 max-w-2xl leading-relaxed animate-fade-in-up"
-          style={{ animationDelay: '0.4s' }}
+          className="mt-6 font-sans text-base md:text-lg max-w-2xl leading-relaxed animate-fade-in-up"
+          style={{ color: 'rgba(245, 240, 228, 0.95)', animationDelay: '0.4s' }}
         >
           Unmapped helps solo travelers, couples, and small groups plan more
-          meaningful trips — with AI-powered planning and human curation.
+          meaningful trips &mdash; with AI-powered planning and human curation.
         </p>
 
         {/* Trust cue */}
         <p
-          className="mt-4 font-sans text-sm text-primary-foreground/58 flex items-center gap-2 animate-fade-in"
-          style={{ animationDelay: '0.55s' }}
+          className="mt-4 font-sans text-sm flex items-center gap-2 animate-fade-in"
+          style={{ color: 'rgba(212, 165, 116, 0.95)', animationDelay: '0.55s' }}
         >
-          <MapPin size={13} className="text-gold shrink-0" />
+          <MapPin size={13} style={{ color: '#D4A574' }} className="shrink-0" />
           Built by a travel creator with trusted local access in Meghalaya and Sikkim.
         </p>
 

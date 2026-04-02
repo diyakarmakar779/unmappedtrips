@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer
       className="border-t border-border"
-      style={{ background: 'hsl(var(--charcoal-soft))' }}
+      style={{ background: 'hsl(var(--forest-deep))' }}
     >
       <div className="max-w-6xl mx-auto px-6 md:px-10 py-14">
         <div className="grid md:grid-cols-3 gap-10">
@@ -16,7 +16,7 @@ export const Footer = () => {
             <div className="flex items-center gap-2.5">
               <span
                 className="h-7 w-7 rounded-full border-2 border-accent flex items-center justify-center"
-                style={{ background: 'hsl(var(--olive-dark))' }}
+                style={{ background: 'hsl(var(--forest))' }}
               >
                 <span className="text-primary-foreground font-serif text-sm font-semibold">
                   U

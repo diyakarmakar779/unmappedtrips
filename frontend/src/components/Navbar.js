@@ -35,7 +35,7 @@ export const Navbar = () => {
         >
           <span
             className="h-7 w-7 rounded-full border-2 border-accent flex items-center justify-center"
-            style={{ background: 'hsl(var(--olive-dark))' }}
+            style={{ background: 'hsl(var(--forest))' }}
           >
             <span className="text-primary-foreground font-serif text-sm font-semibold leading-none">
               U
@@ -103,7 +103,7 @@ export const Navbar = () => {
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="text-left font-sans text-base text-foreground font-medium hover:text-olive transition-colors duration-150"
+                className="text-left font-sans text-base text-foreground font-medium hover:text-forest transition-colors duration-150"
               >
                 {item.label}
               </button>

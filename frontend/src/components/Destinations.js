@@ -6,7 +6,7 @@ const destinations = [
   {
     name: 'Meghalaya',
     tag: 'Northeast India',
-    desc: "Living root bridges, turquoise rivers, and the world's wettest village. Unmapped has trusted local access here.",
+    desc: "Living root bridges, turquoise rivers, and the world's wettest village. Trusted local access.",
     image: 'https://images.pexels.com/photos/19469039/pexels-photo-19469039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     concepts: ['Scenic slow trips', 'Cultural deep dives', 'Hidden waterfall routes'],
     status: 'available',
@@ -81,8 +81,8 @@ export const Destinations = () => {
                 )}
                 {dest.status === 'available' && (
                   <div className="absolute top-4 right-4">
-                    <span className="flex items-center gap-1.5 bg-primary-foreground/90 backdrop-blur-sm text-olive border border-olive/20 text-xs px-2.5 py-1 rounded-full font-medium">
-                      <span className="w-1.5 h-1.5 rounded-full bg-olive" />
+                    <span className="flex items-center gap-1.5 bg-primary-foreground/90 backdrop-blur-sm text-forest border border-forest/20 text-xs px-2.5 py-1 rounded-full font-medium">
+                      <span className="w-1.5 h-1.5 rounded-full bg-forest" />
                       Now open
                     </span>
                   </div>
@@ -111,7 +111,7 @@ export const Destinations = () => {
                       key={j}
                       className="font-sans text-xs bg-muted text-muted-foreground px-2.5 py-1 rounded-full flex items-center gap-1"
                     >
-                      <Compass size={9} className="text-olive" />
+                      <Compass size={9} className="text-forest" />
                       {c}
                     </span>
                   ))}

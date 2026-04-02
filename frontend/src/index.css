@@ -6,85 +6,100 @@
 
 /* ============================================
    UNMAPPED — Design System Tokens
-   Palette: Ivory · Sand · Olive · Taupe · Gold
+   Palette: Forest Green · Ivory · Olive · Warm Gold
+   User-defined brand colors (hex → HSL)
+   #2E5B2E → 120 33% 27%   Deep forest green
+   #6B8E23 → 80  60% 35%   Bright olive accent
+   #87A922 → 75  66% 40%   Vibrant green CTA
+   #F9F8F5 → 45  25% 97%   Warm ivory bg
+   #FDFDFB → 60  20% 99%   Clean white
+   #F4F2ED → 40  24% 94%   Soft sand
+   #1A1A1A → 0   0%  10%   Deep charcoal
+   #D4A574 → 31  53% 64%   Warm gold
    ============================================ */
 
 @layer base {
   :root {
     /* ── Core Surface ── */
-    --background:      37 42% 95%;   /* Warm ivory  #F5EFE4 */
-    --foreground:      28 22% 13%;   /* Deep charcoal */
-    --card:            37 38% 98%;   /* Near-white ivory */
-    --card-foreground: 28 22% 13%;
-    --popover:         37 38% 98%;
-    --popover-foreground: 28 22% 13%;
+    --background:      45 25% 97%;   /* #F9F8F5 warm ivory */
+    --foreground:      0  0%  10%;   /* #1A1A1A deep charcoal */
+    --card:            60 20% 99%;   /* #FDFDFB clean white */
+    --card-foreground: 0  0%  18%;   /* #2D2D2D */
+    --popover:         60 20% 99%;
+    --popover-foreground: 0 0% 10%;
 
     /* ── Brand Colors ── */
-    --primary:            86 22% 36%;  /* Olive green  #597250 */
-    --primary-foreground: 37 42% 95%; /* Ivory */
-    --primary-hover:      86 22% 30%; /* Darker olive on hover */
+    --primary:            120 33% 27%;  /* #2E5B2E deep forest green */
+    --primary-foreground: 45  25% 97%;  /* ivory on green */
+    --primary-hover:      120 33% 22%;  /* darker on hover */
 
-    --secondary:            33 36% 82%; /* Sand #D9C8B0 */
-    --secondary-foreground: 28 22% 13%;
+    --secondary:            40  24% 94%; /* #F4F2ED soft sand */
+    --secondary-foreground: 0   0%  18%;
 
-    --accent:            36 42% 58%;  /* Muted gold  #C4A670 */
-    --accent-foreground: 28 22% 13%;
+    --accent:            31 53% 64%;  /* #D4A574 warm gold */
+    --accent-foreground: 0  0%  10%;
 
-    --muted:            34 25% 90%;  /* Pale sand */
-    --muted-foreground: 28 14% 48%;  /* Taupe  #8E7F6E */
+    --muted:            40 18% 91%;   /* very light sand */
+    --muted-foreground: 0  0%  43%;   /* #6D6D6D medium gray */
 
     /* ── States ── */
     --destructive:            0 72% 51%;
-    --destructive-foreground: 37 42% 95%;
+    --destructive-foreground: 45 25% 97%;
 
     /* ── Borders & Inputs ── */
-    --border:  34 22% 86%;
-    --input:   34 22% 86%;
-    --ring:    36 42% 58%;  /* Gold focus ring */
+    --border:  40 16% 88%;
+    --input:   40 16% 88%;
+    --ring:    75 66% 40%;  /* CTA green focus ring */
 
     /* ── Brand-Specific Tokens ── */
-    --ivory:         37 42% 95%;
-    --sand:          33 36% 82%;
-    --sand-light:    35 32% 90%;
-    --olive:         86 22% 36%;
-    --olive-light:   82 18% 48%;
-    --olive-dark:    86 26% 26%;
-    --taupe:         28 14% 50%;
-    --gold:          36 42% 58%;
-    --gold-light:    38 48% 70%;
-    --charcoal:      28 22% 13%;
-    --charcoal-soft: 28 16% 22%;
+    --ivory:          45 25% 97%;    /* #F9F8F5 */
+    --sand:           40 24% 94%;    /* #F4F2ED */
+    --sand-mid:       36 20% 87%;    /* medium sand */
+    --forest:         120 33% 27%;   /* #2E5B2E */
+    --forest-deep:    120 36% 20%;   /* darker forest */
+    --olive:          80  60% 35%;   /* #6B8E23 */
+    --olive-light:    76  52% 46%;   /* lighter olive */
+    --olive-dark:     120 33% 22%;   /* darkened forest */
+    --cta-green:      75  66% 40%;   /* #87A922 vibrant CTA */
+    --cta-hover:      80  60% 35%;   /* hover = olive */
+    --gold:           31  53% 64%;   /* #D4A574 warm gold */
+    --gold-light:     32  60% 73%;   /* lighter gold */
+    --charcoal:       0   0%  10%;   /* #1A1A1A */
+    --charcoal-soft:  0   0%  16%;   /* #292929 */
+    --text-primary:   0   0%  18%;   /* #2D2D2D */
+    --text-secondary: 0   0%  43%;   /* #6D6D6D */
 
     /* ── Gradients ── */
     --gradient-hero-overlay: linear-gradient(
       to bottom,
-      hsl(28 22% 13% / 0.15) 0%,
-      hsl(28 22% 13% / 0.55) 60%,
-      hsl(28 22% 13% / 0.72) 100%
+      hsl(120 33% 10% / 0.05) 0%,
+      hsl(120 33% 10% / 0.35) 35%,
+      hsl(120 33% 10% / 0.65) 60%,
+      hsl(120 33% 10% / 0.82) 100%
     );
     --gradient-sand: linear-gradient(
-      135deg,
-      hsl(37 42% 95%) 0%,
-      hsl(33 36% 88%) 100%
+      160deg,
+      hsl(45 25% 97%) 0%,
+      hsl(40 24% 93%) 100%
     );
-    --gradient-olive-dark: linear-gradient(
+    --gradient-forest: linear-gradient(
       135deg,
-      hsl(86 26% 26%) 0%,
-      hsl(86 22% 36%) 100%
+      hsl(120 36% 20%) 0%,
+      hsl(120 33% 27%) 100%
     );
     --gradient-section: linear-gradient(
       180deg,
-      hsl(37 42% 95%) 0%,
-      hsl(33 36% 90%) 100%
+      hsl(45 25% 97%) 0%,
+      hsl(40 24% 93%) 100%
     );
 
     /* ── Shadows ── */
-    --shadow-card:    0 2px 16px hsl(28 22% 13% / 0.07),
-                      0 1px 4px  hsl(28 22% 13% / 0.05);
-    --shadow-hover:   0 8px 32px hsl(28 22% 13% / 0.12),
-                      0 2px 8px  hsl(28 22% 13% / 0.07);
-    --shadow-gold:    0 4px 24px hsl(36 42% 58% / 0.22);
-    --shadow-olive:   0 4px 24px hsl(86 22% 36% / 0.22);
+    --shadow-card:    0 2px 16px hsl(0 0% 10% / 0.06),
+                      0 1px 4px  hsl(0 0% 10% / 0.04);
+    --shadow-hover:   0 8px 32px hsl(0 0% 10% / 0.11),
+                      0 2px 8px  hsl(0 0% 10% / 0.06);
+    --shadow-gold:    0 4px 24px hsl(31 53% 64% / 0.22);
+    --shadow-olive:   0 4px 24px hsl(120 33% 27% / 0.25);
 
     /* ── Typography ── */
     --font-serif:  'Cormorant Garamond', Georgia, serif;
@@ -102,25 +117,25 @@
     --radius-xl: 1.25rem;
   }
 
-  /* Dark mode — not primary but accessible */
+  /* Dark mode */
   .dark {
-    --background:      28 22% 10%;
-    --foreground:      37 42% 92%;
-    --card:            28 20% 14%;
-    --card-foreground: 37 42% 92%;
-    --popover:         28 20% 14%;
-    --popover-foreground: 37 42% 92%;
-    --primary:            82 20% 52%;
-    --primary-foreground: 28 22% 10%;
-    --secondary:          28 16% 20%;
-    --secondary-foreground: 37 42% 92%;
-    --accent:            36 42% 58%;
-    --accent-foreground: 28 22% 10%;
-    --muted:            28 16% 18%;
-    --muted-foreground: 33 18% 60%;
-    --border:  28 16% 22%;
-    --input:   28 16% 22%;
-    --ring:    36 42% 58%;
+    --background:      120 10% 8%;
+    --foreground:      45  20% 93%;
+    --card:            120 10% 11%;
+    --card-foreground: 45  20% 93%;
+    --popover:         120 10% 11%;
+    --popover-foreground: 45 20% 93%;
+    --primary:            75  55% 46%;
+    --primary-foreground: 120 10% 8%;
+    --secondary:          120 8%  16%;
+    --secondary-foreground: 45 20% 93%;
+    --accent:            31 53% 64%;
+    --accent-foreground: 120 10% 8%;
+    --muted:            120 8%  14%;
+    --muted-foreground: 0   0%  58%;
+    --border:  120 8% 20%;
+    --input:   120 8% 20%;
+    --ring:    75 66% 40%;
   }
 }
 

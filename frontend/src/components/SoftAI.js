@@ -68,8 +68,8 @@ export const SoftAI = () => {
               >
                 {/* Icon + label row */}
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-olive/10 border border-olive/20 flex items-center justify-center">
-                    <Icon size={16} className="text-olive" />
+                  <div className="w-9 h-9 rounded-lg bg-forest/10 border border-forest/20 flex items-center justify-center">
+                    <Icon size={16} className="text-forest" />
                   </div>
                   <span className="tracking-editorial text-muted-foreground">
                     {p.label}

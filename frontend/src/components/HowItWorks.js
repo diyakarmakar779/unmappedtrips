@@ -12,7 +12,7 @@ const steps = [
   {
     number: '02',
     icon: Compass,
-    title: 'We craft your trip plan',
+    title: 'We craft your plan',
     desc: 'We use AI-powered planning and human insight to design a detailed, personalised itinerary just for you.',
   },
   {
@@ -62,7 +62,7 @@ export const HowItWorks = () => {
               >
                 {/* Step circle */}
                 <div className="relative z-10 w-20 h-20 rounded-full bg-card border-2 border-accent flex flex-col items-center justify-center shadow-gold">
-                  <Icon size={20} className="text-olive" />
+                  <Icon size={20} className="text-forest" />
                   <span className="font-sans text-[10px] font-semibold text-muted-foreground mt-1 tracking-widest">
                     {step.number}
                   </span>
@@ -86,7 +86,7 @@ export const HowItWorks = () => {
             size="lg"
             onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
           >
-            Reserve your spot
+            Claim your first plan free
           </Button>
           <p className="font-sans text-xs text-muted-foreground">
             {CTA_MICROCOPY}

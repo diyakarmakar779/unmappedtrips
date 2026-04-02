@@ -5,7 +5,7 @@
  * Replace GOOGLE_FORM_URL with your actual Google Form link.
  * This is the only place you need to update it.
  */
-export const GOOGLE_FORM_URL = 'https://forms.gle/unmapped-early-access';
+export const GOOGLE_FORM_URL = 'https://forms.gle/kGxPK5p31dNyTjxM7';
 
 export const BRAND_NAME = 'Unmapped';
 export const TOTAL_SPOTS = 50;

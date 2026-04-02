@@ -13,13 +13,13 @@ const features = [
   },
   {
     icon: Coffee,
-    title: 'Local cafes & experiences',
-    desc: "The spots that aren't on every travel blog — local food, quiet corners, and real cultural immersion.",
+    title: 'Local experiences',
+    desc: "Real cultural immersion, not Instagram-famous spots",
   },
   {
     icon: Wallet,
     title: 'Budget breakdown',
-    desc: 'A clear estimate of what to expect across stays, transport, and experiences — no nasty surprises.',
+    desc: 'No surprises across stays, transport, experiences',
   },
   {
     icon: Lightbulb,
@@ -68,8 +68,8 @@ export const WhatYouGet = () => {
                 className="fade-up card-hover bg-card rounded-xl p-7 shadow-card border border-border flex flex-col gap-4"
                 style={{ transitionDelay: `${i * 0.07}s` }}
               >
-                <div className="w-10 h-10 rounded-lg bg-olive/10 border border-olive/20 flex items-center justify-center">
-                  <Icon size={18} className="text-olive" />
+                <div className="w-10 h-10 rounded-lg bg-forest/10 border border-forest/20 flex items-center justify-center">
+                  <Icon size={18} className="text-forest" />
                 </div>
                 <div className="flex flex-col flex-1 gap-2">
                   <h3 className="font-serif text-xl font-medium text-foreground">
