@@ -35,7 +35,7 @@ export const Footer = () => {
               {[
                 { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/unmapped.travel_/' },
                 // { icon: MessageCircle, label: 'WhatsApp', href: '#' },
-                // { icon: Mail, label: 'Email', href: 'mailto:hello@unmapped.in' },
+                { icon: Mail, label: 'Email', href: 'mailto:hello@unmappedtrips.in' },
               ].map((social) => {
                 const Icon = social.icon;
                 return (
