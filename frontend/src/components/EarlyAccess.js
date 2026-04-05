@@ -5,18 +5,18 @@ import { GOOGLE_FORM_URL, CTA_MICROCOPY, TOTAL_SPOTS, SPOTS_CLAIMED } from '../c
 const perks = [
   {
     icon: Star,
-    title: 'Free trip customization',
-    desc: 'Your first curated trip plan is completely free — no payment, no commitment, no fine print.',
+    title: 'Priority trip access',
+    desc: 'Be first in line for curated Meghalaya and Sikkim journeys as early access opens.',
   },
   {
     icon: ShieldCheck,
-    title: 'Founder-reviewed itineraries',
-    desc: 'Every early-access plan is personally reviewed and refined before it reaches you.',
+    title: 'Closer planning support',
+    desc: 'Early travelers get a more hands-on, thoughtfully refined planning experience.',
   },
   {
     icon: Users,
-    title: 'Priority access to curated drops',
-    desc: 'Early members get first access to new destinations, seasonal trip concepts, and curated experiences.',
+    title: 'First access to new drops',
+    desc: 'Hear first when new destinations, seasonal concepts, and curated experiences go live.',
   },
 ];
 
@@ -53,9 +53,8 @@ export const EarlyAccess = () => {
           </h2>
 
           <p className="mt-5 font-sans text-base leading-relaxed" style={{ color: 'hsl(var(--primary-foreground) / 0.62)' }}>
-            We're opening a founding group of 50 travelers to shape how Unmapped
-            works. Once those spots are filled, free access ends and pricing goes live.
-          </p>
+  We're opening early access to the first 50 travelers joining Unmapped. You'll get priority access to upcoming trips, early access to new destinations, and a more hands-on planning experience from the start.
+</p>
 
           {/* Progress bar */}
           <div className="mt-9 px-2">
@@ -124,7 +123,7 @@ export const EarlyAccess = () => {
             {CTA_MICROCOPY}
           </p>
           <p className="font-sans text-xs font-medium mt-1" style={{ color: 'hsl(var(--gold))' }}>
-            Limited spots. Once filled, pricing goes live.
+            Limited spots. Early access closes once all 50 are claimed.
           </p>
         </div>
       </div>

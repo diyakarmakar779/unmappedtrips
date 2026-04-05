@@ -6,7 +6,7 @@ const destinations = [
   {
     name: 'Meghalaya',
     tag: 'Northeast India',
-    desc: "Living root bridges, turquoise rivers, and the world's wettest village. Trusted local access.",
+    desc: "Living root bridges, turquoise rivers, and the world's wettest village. Curated for slower, deeper travel.",
     image: 'https://images.pexels.com/photos/19469039/pexels-photo-19469039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     concepts: ['Scenic slow trips', 'Cultural deep dives', 'Hidden waterfall routes'],
     status: 'available',
@@ -14,15 +14,15 @@ const destinations = [
   {
     name: 'Sikkim',
     tag: 'Eastern Himalayas',
-    desc: 'Ancient monasteries, alpine lakes, and the quiet shadow of Kangchenjunga. Built for the thoughtful traveler.',
+    desc: 'Ancient monasteries, alpine lakes, and the quiet shadow of Kangchenjunga. Curated for the thoughtful traveler.',
     image: 'https://images.pexels.com/photos/32010298/pexels-photo-32010298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     concepts: ['Mountain monastery trails', 'Hidden-route concepts', 'Cultural deep dives'],
     status: 'available',
   },
   {
-    name: 'More coming',
-    tag: 'Expanding soon',
-    desc: 'Spiti Valley, Coorg, Hampi, Kutch and more are in the pipeline. Early users help us decide what comes next.',
+    name: 'More destinations',
+    tag: 'Expanding across India',
+    desc: 'Spiti Valley, Coorg, Hampi, Kutch and more in the pipeline. Early users help shape what comes next.',
     image: 'https://images.unsplash.com/photo-1752318080519-442bf251f28f?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85',
     concepts: ['Spiti Valley', 'Coorg', 'Hampi'],
     status: 'soon',
@@ -50,8 +50,7 @@ export const Destinations = () => {
             </h2>
           </div>
           <p className="fade-up font-sans text-sm text-muted-foreground max-w-xs leading-relaxed md:text-right">
-            We are starting with the destinations we know best, where our
-            curation is deepest and our local access is trusted.
+            We're starting with destinations where our curation is deepest and most refined.
           </p>
         </div>
 

@@ -5,7 +5,7 @@ const problems = [
   {
     id: 'where-we-begin',
     title: 'Where we begin',
-    desc: 'We’re currently curating concept-led, culturally rich trips across Meghalaya and Sikkim — with more destinations across India to follow.',
+    desc: 'We’re currently curating concept-led, culturally rich trips across Meghalaya and Sikkim, with more destinations across India to follow.',
   },
   {
     id: 'generic-planning',
@@ -49,9 +49,9 @@ export const WhatIsUnmapped = () => {
             </h2>
 
             <p className="font-sans text-base text-muted-foreground leading-relaxed max-w-xl">
-              Most trips start the same way — a dozen tabs open, saved reels everywhere,
-              and no real plan. Unmapped brings your itinerary, stays, budget, bookings,
-              and trip details into one thoughtful plan, designed around how you travel.
+              Most trips start the same way, a dozen tabs open, saved reels everywhere, and no real plan. 
+Unmapped coordinates your itinerary, stays, transport, budget, bookings, and trip details 
+into one thoughtful system, designed around how you travel.
             </p>
 
             <div className="space-y-5 mt-1">
@@ -73,7 +73,7 @@ export const WhatIsUnmapped = () => {
             </div>
 
             <p className="font-sans text-xs text-muted-foreground italic border-l-2 border-accent pl-3 mt-1 max-w-lg">
-              One thoughtful system for planning better trips.
+              One thoughtful system for better-planned trips.
             </p>
 
             {/*

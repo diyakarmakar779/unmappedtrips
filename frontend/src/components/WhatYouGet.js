@@ -4,32 +4,32 @@ const features = [
   {
     icon: Map,
     title: 'Day-wise itinerary',
-    desc: 'A structured, concept-led plan that flows naturally — no rushed jumps or wasted travel time.',
+    desc: 'A structured, concept-led journey with better flow and fewer rushed decisions.',
   },
   {
     icon: Bed,
     title: 'Stay recommendations',
-    desc: 'Handpicked stays that match your vibe — boutique guesthouses, homestays, or hidden gems.',
+    desc: 'Handpicked places to stay that match the mood and style of your trip.',
   },
   {
     icon: Coffee,
     title: 'Local experiences',
-    desc: "Real cultural immersion, not Instagram-famous spots",
+    desc: "Real cultural immersion, beyond the usual list of popular stops.",
   },
   {
     icon: Wallet,
     title: 'Budget breakdown',
-    desc: 'No surprises across stays, transport, experiences',
+    desc: 'A clear view of costs across stays, transport, and experiences.',
   },
   {
     icon: Lightbulb,
     title: 'Curated travel tips',
-    desc: "What to pack, what to avoid, when to go — practical advice from people who've actually been.",
+    desc: "Useful advice on timing, packing, pace, and the details that make travel easier.",
   },
   {
     icon: Navigation,
     title: 'Hidden route concepts',
-    desc: 'Scenic slow routes, cultural deep dives, and off-the-beaten-path concepts built into your plan.',
+    desc: 'Scenic slow routes, deeper cultural detours, and lesser-known ways to explore.',
   },
 ];
 
@@ -50,11 +50,10 @@ export const WhatYouGet = () => {
           <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground leading-snug">
             One complete plan.
             <br />
-            <em>Ready to travel.</em>
+            <em>Fully coordinated</em>
           </h2>
           <p className="mt-4 font-sans text-base text-muted-foreground leading-relaxed">
-            Every Unmapped plan is a single, cohesive document — no links to
-            follow, no decisions left unmade.
+            Every Unmapped trip is fully coordinated — itinerary, stays, budget, local experiences, and travel tips brought together. No scattered links. No second-guessing.
           </p>
         </div>
 

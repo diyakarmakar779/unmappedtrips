@@ -34,7 +34,7 @@ export const Hero = () => {
         {/* Eyebrow */}
         <div className="animate-fade-in" style={{ animationDelay: '0.15s' }}>
           <span className="tracking-editorial text-primary-foreground/65">
-            Curated travel &middot; India
+            Travel OS for India
           </span>
         </div>
 
@@ -54,7 +54,7 @@ export const Hero = () => {
   className="mt-5 font-sans text-base md:text-lg font-light max-w-2xl leading-relaxed animate-fade-in-up"
   style={{ color: 'rgba(245, 240, 228, 0.92)', animationDelay: '0.4s' }}
 >
-  A travel OS that brings your itinerary, stays, budgets, and bookings into one thoughtful plan.
+  A travel OS that coordinates your itinerary, stays, budget, and bookings into one thoughtful trip.
 </p>
 
         {/* Trust cue */}
@@ -77,7 +77,7 @@ export const Hero = () => {
             onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
             className="btn-pulse">
 
-            Reserve your spot
+            Be among the first 50
           </Button>
           {/* <Button
             variant="ghost-light"
@@ -92,7 +92,7 @@ export const Hero = () => {
           className="mt-3 font-sans text-xs text-primary-foreground/50 animate-fade-in"
           style={{ animationDelay: '0.8s' }}>
 
-          {CTA_MICROCOPY}
+         Full trip coordination for your first Unmapped journey
         </p>
 
         {/* Urgency badge */}
