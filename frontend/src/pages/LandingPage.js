@@ -24,7 +24,6 @@ export default function LandingPage() {
       <WhatYouGet />
       <HowItWorks />
       <WhyDifferent />
-      <SoftAI />
       <Destinations />
       <EarlyAccess />
       <FAQ />
