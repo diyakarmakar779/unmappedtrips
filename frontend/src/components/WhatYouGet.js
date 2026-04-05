@@ -29,7 +29,7 @@ const features = [
   {
     icon: Navigation,
     title: 'Hidden route concepts',
-    desc: 'cenic slow routes, deeper cultural detours, and lesser-known ways to explore.',
+    desc: 'Scenic slow routes, deeper cultural detours, and lesser-known ways to explore.',
   },
 ];
 
