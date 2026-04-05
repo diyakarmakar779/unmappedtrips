@@ -7,28 +7,28 @@ import {
 
 const faqs = [
   {
-    q: 'Is Unmapped live yet?',
-    a: 'Unmapped is currently in early access. We are onboarding our first 50 users to refine the experience before opening to the public. Reserving your spot now means you get free trip customization and a founder-reviewed itinerary.',
+    q: 'How do I join early access?',
+    a: "Fill in the short form — it takes about 2 minutes. We'll reach out on WhatsApp within 24–48 hours to learn more about your trip and start shaping your plan.",
   },
   {
     q: 'What do early users get?',
-    a: 'The first 50 users receive: free trip customization for their first trip, a founder-reviewed itinerary, and priority access to new curated trip drops and destinations as we expand. Once 50 spots are filled, these perks end and pricing goes live.',
+    a: 'Early access members get priority trip access, closer planning support, and first access to new destinations and curated drops. Once all 50 spots are claimed, early access closes.',
   },
   {
-    q: 'Is this an AI travel app?',
-    a: 'Not exactly. Unmapped uses AI to power the planning process — routes, budgets, itinerary drafting — but every plan is reviewed and refined by a human curator before it reaches you. Think of it as a travel concierge that uses smart technology behind the scenes, not a chatbot you interact with.',
+    q: 'What does Travel OS actually mean?',
+    a: 'Unmapped is a Travel OS for thoughtful trips. AI helps behind the scenes with research, routing, budgets, and trip structuring, while human curation refines the final plan around your travel style.',
   },
   {
     q: 'Which destinations are you starting with?',
-    a: 'We are starting with Meghalaya and Sikkim — two of the most culturally rich and visually stunning destinations in India that are chronically underplanned by most travelers. More destinations will follow. Early users help us decide where next.',
+    a: 'We are starting with Meghalaya and Sikkim. More destinations across India will follow, and early access helps us shape what comes next.',
   },
   {
-    q: 'How does the early-access process work?',
-    a: 'Fill in the short early-access form (takes about 2 minutes). Our team will reach out on WhatsApp within 24–48 hours to learn more about your travel plans. We will then craft and deliver a curated itinerary tailored to your trip.',
+    q: 'What happens after I sign up?',
+    a: "We'll reach out on WhatsApp within 24–48 hours, understand your travel style and plans, and begin shaping a coordinated trip plan around them.",
   },
   {
     q: 'Do you plan trips for families and spiritual travelers?',
-    a: 'Yes — while our primary focus is solo travelers, couples, and small groups, we plan trips for families and spiritual journeys too. Just mention your travel style in the form and we will design accordingly.',
+    a: 'Yes. While our primary focus is solo travelers, couples, and small groups, we also plan trips for families and spiritual journeys. Just mention your travel style in the form.',
   },
 ];
 
