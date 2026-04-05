@@ -50,10 +50,10 @@ export const WhatYouGet = () => {
           <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground leading-snug">
             One complete plan.
             <br />
-            <em>Ready to travel.</em>
+            <em>Fully coordinated</em>
           </h2>
           <p className="mt-4 font-sans text-base text-muted-foreground leading-relaxed">
-            Every Unmapped plan is a single, cohesive guide with your itinerary, stays, budget, local experiences, and travel tips all in one place. No scattered links. No second-guessing what comes next.
+            Every Unmapped trip is fully coordinated — itinerary, stays, budget, local experiences, and travel tips brought together. No scattered links. No second-guessing.
           </p>
         </div>
 
