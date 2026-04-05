@@ -50,14 +50,14 @@ export const Hero = () => {
           <em className="font-light">Curated for how you travel.</em>
         </h1>
 
-        {/* Subheadline */}
-        <p
-          className="mt-6 font-sans text-base md:text-lg max-w-2xl leading-relaxed animate-fade-in-up"
-          style={{ color: 'rgba(245, 240, 228, 0.95)', animationDelay: '0.4s' }}>
+        // {/* Subheadline */}
+        // <p
+        //   className="mt-6 font-sans text-base md:text-lg max-w-2xl leading-relaxed animate-fade-in-up"
+        //   style={{ color: 'rgba(245, 240, 228, 0.95)', animationDelay: '0.4s' }}>
 
-          Unmapped helps solo travelers, couples, and small groups plan more
-          meaningful trips with AI-powered planning and human curation.
-        </p>
+        //   Unmapped helps solo travelers, couples, and small groups plan more
+        //   meaningful trips with AI-powered planning and human curation.
+        // </p>
 
         {/* Trust cue */}
         <p
@@ -65,7 +65,7 @@ export const Hero = () => {
           style={{ color: 'rgba(212, 165, 116, 0.95)', animationDelay: '0.55s' }}>
 
           <MapPin size={13} style={{ color: '#D4A574' }} className="shrink-0" />
-          Built by a travel creator with trusted local access in Meghalaya and Sikkim.
+          Backed by local wisdom and the shared adventures of our travel community.
         </p>
 
         {/* CTA block */}
