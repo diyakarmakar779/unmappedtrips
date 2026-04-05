@@ -30,7 +30,7 @@ export const Footer = () => {
               className="font-sans text-sm leading-relaxed"
               style={{ color: 'hsl(var(--primary-foreground) / 0.55)' }}
             >
-              A Travel OS for thoughtful journeys across India — powered by AI and refined by human curation.
+              A Travel OS for thoughtful journeys across India powered by AI and refined by human curation.
             </p>
             {/* Social */}
             <div className="flex items-center gap-3 mt-1">
