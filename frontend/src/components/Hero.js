@@ -51,8 +51,8 @@ export const Hero = () => {
         </h1>
 {/* Positioning line */}
 <p
-  className="mt-5 font-sans text-base md:text-lg max-w-2xl leading-relaxed animate-fade-in-up"
-  style={{ color: 'rgba(245, 240, 228, 0.95)', animationDelay: '0.4s' }}
+  className="mt-5 font-serif text-[17px] md:text-xl font-light max-w-2xl leading-relaxed animate-fade-in-up"
+  style={{ color: 'rgba(245, 240, 228, 0.92)', animationDelay: '0.4s' }}
 >
   A travel OS that brings your itinerary, stays, budgets, and bookings into one thoughtful plan.
 </p>
