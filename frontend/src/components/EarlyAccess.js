@@ -122,8 +122,9 @@ export const EarlyAccess = () => {
           <p className="font-sans text-xs" style={{ color: 'hsl(var(--primary-foreground) / 0.42)' }}>
             {CTA_MICROCOPY}
           </p>
+            
           <p className="font-sans text-xs font-medium mt-1" style={{ color: 'hsl(var(--gold))' }}>
-            Limited spots. Early access closes once all 50 are claimed.
+            Limited spots. Early access closes once all 50 are claimed. 
           </p>
         </div>
       </div>
