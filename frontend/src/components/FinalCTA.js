@@ -7,7 +7,6 @@ export const FinalCTA = () => {
       className="relative overflow-hidden grain-overlay"
       style={{ background: 'var(--gradient-sand)' }}
     >
-      {/* Decorative image strip with fade-out */}
       <div className="h-52 md:h-72 relative">
         <img
           src="https://images.unsplash.com/photo-1650884986695-d1e5cf90610f?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
@@ -37,11 +36,9 @@ export const FinalCTA = () => {
           </h2>
 
           <p className="mt-6 font-sans text-base text-muted-foreground leading-relaxed">
-            The first 50 spots come with free trip customization and
-            founder-reviewed itineraries. Once filled, pricing goes live.
+            Early access is limited to the first 50 travelers joining Unmapped. Get priority trip access, closer planning support, and first access to new destinations as the Travel OS expands.
           </p>
 
-          {/* CTA row */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               variant="earthy"
@@ -51,25 +48,16 @@ export const FinalCTA = () => {
             >
               Reserve your spot
             </Button>
-            {/* <Button
-              variant="sand"
-              size="lg"
-              onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-              className="w-full sm:w-auto"
-            >
-              Join early access
-            </Button> */}
           </div>
 
           <p className="mt-4 font-sans text-xs text-muted-foreground">
             {CTA_MICROCOPY}
           </p>
 
-          {/* Urgency note */}
           <div className="mt-6 inline-flex items-center gap-2 bg-muted border border-border rounded-full px-4 py-2">
             <span className="w-1.5 h-1.5 rounded-full bg-olive" />
             <span className="font-sans text-xs text-muted-foreground">
-              Limited to 50 spots. Once filled, this offer ends.
+              Limited to 50 spots. Early access closes once all spots are claimed.
             </span>
           </div>
         </div>
