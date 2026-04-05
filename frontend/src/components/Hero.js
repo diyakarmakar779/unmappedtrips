@@ -49,15 +49,13 @@ export const Hero = () => {
           <br />
           <em className="font-light">Curated for how you travel.</em>
         </h1>
-
-        // {/* Subheadline */}
-        // <p
-        //   className="mt-6 font-sans text-base md:text-lg max-w-2xl leading-relaxed animate-fade-in-up"
-        //   style={{ color: 'rgba(245, 240, 228, 0.95)', animationDelay: '0.4s' }}>
-
-        //   Unmapped helps solo travelers, couples, and small groups plan more
-        //   meaningful trips with AI-powered planning and human curation.
-        // </p>
+{/* Positioning line */}
+<p
+  className="mt-5 font-sans text-base md:text-lg max-w-2xl leading-relaxed animate-fade-in-up"
+  style={{ color: 'rgba(245, 240, 228, 0.95)', animationDelay: '0.4s' }}
+>
+  A travel OS that brings your itinerary, stays, budgets, and bookings into one thoughtful plan.
+</p>
 
         {/* Trust cue */}
         <p
