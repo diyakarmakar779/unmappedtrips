@@ -7,19 +7,19 @@ const steps = [
     number: '01',
     icon: MessageSquare,
     title: 'Tell us where, when & vibe',
-    desc: 'Share your destination, travel dates, budget, and what kind of experience you want. Takes two minutes.',
+    desc: 'Share your destination, dates, budget, and travel style. Takes two minutes.',
   },
   {
     number: '02',
     icon: Compass,
-    title: 'We craft your plan',
-    desc: 'We use AI-powered planning and human insight to design a detailed, personalised itinerary just for you.',
+    title: 'Your travel OS builds the trip',
+    desc: 'AI-powered planning + human curation coordinates stays, transport, experiences, budget, and logistics into one seamless journey.',
   },
   {
     number: '03',
     icon: BookOpen,
-    title: 'Receive your curated itinerary',
-    desc: 'You get a refined, ready-to-use plan with curated recommendations — delivered with clarity.',
+    title: 'Travel with everything ready',
+    desc: 'Your complete trip, coordinated — stays booked, transport arranged, budget clear, and practical details handled. Just go.',
   },
 ];
 
@@ -39,12 +39,11 @@ export const HowItWorks = () => {
           <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground leading-snug">
             Simple from your end.
             <br />
-            <em>Thoughtful from ours.</em>
+            <em>Thoughtfully organised by your travel OS.</em>
           </h2>
-          <p className="mt-4 font-sans text-sm text-muted-foreground leading-relaxed">
-            You share your travel intent. We do the hard part — research, curation,
-            and planning — then hand you a clean, confident trip plan.
-          </p>
+         <p className="mt-4 font-sans text-sm text-muted-foreground leading-relaxed">
+  You tell us what kind of trip you want. Your travel OS coordinates itinerary, stays, transport, experiences, budget, bookings, and logistics into one seamless journey.
+</p>
         </div>
 
         {/* Steps */}
@@ -86,11 +85,13 @@ export const HowItWorks = () => {
             size="lg"
             onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
           >
-            Claim your first plan free
+            Be among the first 50
           </Button>
-          <p className="font-sans text-xs text-muted-foreground">
-            {CTA_MICROCOPY}
-          </p>
+          
+            <p className="font-sans text-xs text-muted-foreground">
+  Full trip coordination for your first Unmapped journey
+</p>
+          
         </div>
       </div>
     </section>
