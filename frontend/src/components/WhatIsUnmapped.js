@@ -111,93 +111,90 @@ const features = [
     id: 'generic-planning',
     icon: Layers3,
     title: 'The generic alternative',
-    desc: 'Most travel planning feels like a chore—copy-pasted blogs and rushed itineraries.',
+    desc: 'Most travel planning feels like a chore copy-pasted blogs and rushed itineraries.',
   },
   {
     id: 'unmapped-is-different',
     icon: Zap,
     title: 'Unmapped is the alternative',
-    desc: 'A calmer way to plan—powered by AI, refined by human curation and insight.',
+    desc: 'A calmer way to plan powered by AI, refined by human curation and insight.',
   },
 ];
 
 export const WhatIsUnmapped = () => {
   return (
-    <section id="what-is-unmapped" className="py-24 md:py-32 bg-[#070a07] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+    <section 
+      id="what-is-unmapped" 
+      className="relative py-24 md:py-32 bg-[#0a120a] overflow-hidden"
+    >
+      {/* ── Transition Gradient ── */}
+      {/* This smoothly pulls the green from your hero into this section */}
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#070a07] to-transparent opacity-50" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
           
           {/* ── VISUAL: Conceptual OS Stack ── */}
-          <div className="relative group perspective-1000">
-            {/* Main Image: Deep, Moody Forest/Mountain */}
-            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl relative">
+          <div className="relative group">
+            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5 shadow-2xl relative">
               <img
                 src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop" 
                 alt="Vision of the Northeast"
-                className="w-full h-full object-cover brightness-75 contrast-110 saturate-[0.9] transition-transform duration-1000 group-hover:scale-105"
+                className="w-full h-full object-cover brightness-75 contrast-110 saturate-[0.8] transition-transform duration-1000 group-hover:scale-105"
               />
-              {/* Subtle Gradient Over the Image */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#070a07] via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a120a] via-transparent to-transparent opacity-60" />
             </div>
 
-            {/* Floating "System Processing" Card */}
-            <div className="absolute -bottom-6 -right-4 md:-right-8 p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] max-w-[260px] animate-fade-in transition-transform duration-500 group-hover:-translate-y-2">
+            {/* Floating UI Card with matching palette */}
+            <div className="absolute -bottom-6 -right-4 md:-right-8 p-6 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-3xl max-w-[260px]">
               <div className="flex items-center gap-2 mb-4">
-                <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-                <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-semibold">Travel OS Active</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-white/40 animate-pulse" />
+                <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 font-semibold text-center">Travel OS Active</span>
               </div>
               
               <div className="space-y-3">
-                <p className="font-serif italic text-lg text-white/90 leading-tight">
+                <p className="font-serif italic text-lg text-white/80 leading-tight">
                   "Curating the slow routes of Meghalaya..."
                 </p>
-                <div className="flex items-center gap-1.5">
-                  <div className="h-1 w-12 rounded-full bg-white/20" />
-                  <div className="h-1 w-6 rounded-full bg-white/10" />
-                  <div className="h-1 w-8 rounded-full bg-white/10" />
-                </div>
-                <p className="text-[10px] text-white/30 font-mono tracking-tighter uppercase mt-4">
+                <p className="text-[9px] text-white/20 font-mono tracking-tighter uppercase mt-4">
                   LAT: 25.5° N / LON: 91.8° E
                 </p>
               </div>
             </div>
-
-            {/* Background Glow to lift the image */}
-            <div className="absolute inset-0 -z-10 bg-white/5 blur-[120px] rounded-full scale-110" />
           </div>
 
           {/* ── CONTENT ── */}
           <div className="flex flex-col gap-8">
             <div className="space-y-4">
-              <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-white/40">
+              <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#c5a383]/60">
                 A system, not an app
               </span>
               
               <h2 className="font-serif italic font-light text-5xl md:text-6xl text-white tracking-tighter leading-[1.1]">
                 Not generic trip planning. <br />
-                <span className="opacity-70">A system for journeys.</span>
+                <span className="text-white/40">A system for journeys.</span>
               </h2>
 
-              <p className="font-sans text-base md:text-lg text-white/60 leading-relaxed max-w-xl">
+              <p className="font-sans text-base md:text-lg text-white/50 leading-relaxed max-w-xl">
                 Unmapped coordinates your itinerary, stays, budget, and local bookings 
-                into one thoughtful system, designed around <span className="text-white font-medium italic">how you travel.</span>
+                into one thoughtful system, designed around <span className="text-white/80 font-medium italic">how you travel.</span>
               </p>
             </div>
 
-            {/* Feature List with Glass Icons */}
+            {/* Feature List */}
             <div className="space-y-8 py-4">
               {features.map((item) => {
                 const Icon = item.icon;
                 return (
                   <div key={item.id} className="flex gap-6 group">
-                    <div className="mt-1 shrink-0 w-10 h-10 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center group-hover:bg-white/[0.08] transition-colors duration-300">
-                      <Icon size={18} className="text-white/70 group-hover:text-white transition-colors" />
+                    <div className="mt-1 shrink-0 w-10 h-10 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-center group-hover:border-white/20 transition-all">
+                      <Icon size={18} className="text-white/40 group-hover:text-white transition-colors" />
                     </div>
                     <div className="space-y-1">
-                      <h4 className="font-sans text-base font-semibold text-white tracking-tight">
+                      <h4 className="font-sans text-base font-semibold text-white/90 tracking-tight">
                         {item.title}
                       </h4>
-                      <p className="font-sans text-sm text-white/50 leading-relaxed">
+                      <p className="font-sans text-sm text-white/40 leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
@@ -206,14 +203,14 @@ export const WhatIsUnmapped = () => {
               })}
             </div>
 
-            <div className="pt-4">
-              <Button
-                onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-                className="bg-white text-black hover:bg-white/90 px-10 py-7 text-sm font-bold uppercase tracking-widest rounded-full transition-all hover:scale-[1.03] shadow-2xl"
-              >
-                Join the Waitlist
-              </Button>
-            </div>
+            // <div className="pt-4">
+            //   <Button
+            //     onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
+            //     className="bg-white text-black hover:bg-white/90 px-10 py-7 text-sm font-bold uppercase tracking-widest rounded-full transition-all shadow-2xl"
+            //   >
+            //     Join the Waitlist
+            //   </Button>
+            // </div>
           </div>
         </div>
       </div>
