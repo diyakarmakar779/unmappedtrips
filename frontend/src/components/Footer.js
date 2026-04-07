@@ -5,35 +5,30 @@ export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer
-      className="border-t border-border"
-      style={{ background: 'hsl(var(--forest-deep))' }}
-    >
-      <div className="max-w-6xl mx-auto px-6 md:px-10 py-14">
-        <div className="grid md:grid-cols-3 gap-10">
-          {/* Brand */}
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-2.5">
-              <span
-                className="h-7 w-7 rounded-full border-2 border-accent flex items-center justify-center"
-                style={{ background: 'hsl(var(--forest))' }}
-              >
-                <span className="text-primary-foreground font-serif text-sm font-semibold">
-                  U
-                </span>
-              </span>
-              <span className="font-serif text-xl font-semibold text-primary-foreground">
+    <footer className="bg-[#0a120a] border-t border-white/5 relative overflow-hidden">
+      {/* Subtle organic glow in the corner to match the hero/cta */}
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/[0.02] blur-[100px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-20 relative z-10">
+        <div className="grid md:grid-cols-3 gap-16 md:gap-24">
+          
+          {/* ── Brand ── */}
+          <div className="flex flex-col gap-6">
+            <div className="flex items-center gap-3 group">
+              <div className="h-8 w-8 rounded-full border border-white/20 flex items-center justify-center transition-all group-hover:border-white/40">
+                <span className="font-serif text-sm text-white font-light">u</span>
+              </div>
+              <span className="font-serif text-xl text-white tracking-tight font-light">
                 Unmapped
               </span>
             </div>
-            <p
-              className="font-sans text-sm leading-relaxed"
-              style={{ color: 'hsl(var(--primary-foreground) / 0.55)' }}
-            >
-              A Travel OS for thoughtful journeys across India powered by AI and refined by human curation.
+            
+            <p className="font-sans text-sm leading-relaxed text-white/40 max-w-xs">
+              A Travel OS for thoughtful journeys across India. Powered by AI and refined by human curation.
             </p>
+
             {/* Social */}
-            <div className="flex items-center gap-3 mt-1">
+            <div className="flex items-center gap-4">
               {[
                 {
                   icon: Instagram,
@@ -51,54 +46,35 @@ export const Footer = () => {
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200"
-                    style={{
-                      background: 'hsl(var(--primary-foreground) / 0.08)',
-                      color: 'hsl(var(--primary-foreground) / 0.55)',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.color = 'hsl(var(--gold))';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.color = 'hsl(var(--primary-foreground) / 0.55)';
-                    }}
+                    className="text-white/30 hover:text-[#c5a383] transition-colors duration-300"
                   >
-                    <Icon size={14} />
+                    <Icon size={18} />
                   </a>
                 );
               })}
             </div>
           </div>
 
-          {/* Quick links */}
+          {/* ── Navigate (Updated with FAQ) ── */}
           <div>
-            <p
-              className="font-sans text-xs font-semibold tracking-wider uppercase mb-5"
-              style={{ color: 'hsl(var(--primary-foreground) / 0.35)' }}
-            >
+            <p className="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-white/20 mb-8">
               Navigate
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {[
+                { label: 'The System', id: 'what-is-unmapped' },
                 { label: 'What you get', id: 'what-you-get' },
-                { label: 'How it works', id: 'how-it-works' },
                 { label: 'Destinations', id: 'destinations' },
-                { label: 'Early access', id: 'early-access' },
                 { label: 'FAQ', id: 'faq' },
               ].map((item) => (
                 <li key={item.id}>
                   <button
                     type="button"
                     onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' })}
-                    className="font-sans text-sm transition-colors duration-150"
-                    style={{ color: 'hsl(var(--primary-foreground) / 0.55)' }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.color = 'hsl(var(--primary-foreground) / 0.9)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.color = 'hsl(var(--primary-foreground) / 0.55)';
-                    }}
+                    className="font-sans text-sm text-white/40 hover:text-white transition-colors duration-300"
                   >
                     {item.label}
                   </button>
@@ -107,49 +83,32 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* CTA */}
-          <div className="flex flex-col gap-4">
-            <p
-              className="font-sans text-xs font-semibold tracking-wider uppercase"
-              style={{ color: 'hsl(var(--primary-foreground) / 0.35)' }}
-            >
-              Join early
+          {/* ── CTA ── */}
+          <div className="flex flex-col gap-6">
+            <p className="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-white/20">
+              Priority Access
             </p>
-            <p
-              className="font-sans text-sm leading-relaxed"
-              style={{ color: 'hsl(var(--primary-foreground) / 0.55)' }}
-            >
-              First 50 spots are open. Reserve yours before early access closes.
+            <p className="font-sans text-sm leading-relaxed text-white/40">
+              Join the waitlist to receive updates on new destinations and early member benefits.
             </p>
-            <a
-              href={GOOGLE_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-sans text-sm font-medium transition-colors duration-200"
-              style={{ color: 'hsl(var(--gold))' }}
+            <button
+              onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
+              className="group flex items-center gap-2 font-sans text-sm font-semibold text-white hover:text-[#c5a383] transition-colors duration-300 w-fit"
             >
-              Reserve your spot
-              <span aria-hidden>→</span>
-            </a>
+              Join Waitlist
+              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </button>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div
-          className="mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 border-t"
-          style={{ borderColor: 'hsl(var(--primary-foreground) / 0.1)' }}
-        >
-          <p
-            className="font-sans text-xs"
-            style={{ color: 'hsl(var(--primary-foreground) / 0.3)' }}
-          >
-            © {year} Unmapped. All rights reserved.
+        {/* ── Bottom Bar ── */}
+        <div className="mt-24 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <p className="font-sans text-[10px] tracking-widest uppercase text-white/20">
+            © {year} Unmapped. Designed for the curious.
           </p>
-          <p
-            className="font-sans text-xs"
-            style={{ color: 'hsl(var(--primary-foreground) / 0.3)' }}
-          >
-            Made with care for every journey
+          <div className="h-px w-8 bg-white/10 hidden sm:block" />
+          <p className="font-sans text-[10px] tracking-widest uppercase text-white/20 text-center sm:text-right">
+            Curating the quiet corners of India
           </p>
         </div>
       </div>
