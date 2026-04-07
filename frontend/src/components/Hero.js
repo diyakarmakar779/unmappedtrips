@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Button } from './ui/button';
 import { ArrowDown } from 'lucide-react';
 import { GOOGLE_FORM_URL } from '../constants';
@@ -11,26 +10,23 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center grain-overlay overflow-hidden bg-[#0A0E0A]">
-      {/* ── Background Image ── */}
+      {/* ── Background Image (Standard React Tag) ── */}
       <div className="absolute inset-0 z-0 opacity-60">
-        <Image
+        <img
           src="/hero-bg.png" 
           alt="Travel OS Background"
-          fill
-          priority
-          quality={90}
-          className="object-cover hero-parallax-img"
+          className="w-full h-full object-cover hero-parallax-img"
+          // 'loading="eager"' ensures it starts loading immediately
+          loading="eager" 
         />
-        {/* Deep centered radial gradient for that 'Banking/SaaS' focus */}
         <div
           className="absolute inset-0"
           style={{ background: 'radial-gradient(circle at center, transparent 0%, rgba(10, 14, 10, 0.8) 100%)' }} />
       </div>
 
-      {/* ── Content Container (SaaS/Banking Format) ── */}
+      {/* ── Content Container ── */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto px-6">
         
-        {/* Badge / Eyebrow */}
         <div className="mb-6 animate-fade-in">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-foreground/5 border border-primary-foreground/10 text-[10px] uppercase tracking-widest text-primary-foreground/70">
             <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
@@ -38,35 +34,31 @@ export const Hero = () => {
           </span>
         </div>
 
-        {/* Main Title (Using Inter/Sans-serif for the 'SaaS' look) */}
-       <h1 className="font-sans font-semibold text-5xl md:text-7xl lg:text-[5.5rem] text-primary-foreground tracking-tighter leading-[1.1] animate-fade-in-up">
-  Travel OS for 
-  <span className="block italic font-light opacity-90 tracking-tight">Indian Explorers</span>
-</h1>
+        <h1 className="font-sans font-semibold text-5xl md:text-7xl lg:text-[5.5rem] text-primary-foreground tracking-tighter leading-[1.1] animate-fade-in-up">
+          Travel OS for 
+          <span className="block italic font-light opacity-90 tracking-tight">Indian Explorers</span>
+        </h1>
 
-        {/* Sub-headline (The 'Banking' format: short, punchy, functional) */}
         <p className="mt-8 font-sans text-lg md:text-xl font-light text-primary-foreground/80 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           Coordinate your entire journey. Manage stays, local routes, and budgets. 
-          <span className="md:block"> Deep cultural immersion, powered by local wisdom.</span>
+          <span className="md:block text-primary-foreground/60">Deep cultural immersion, powered by local wisdom.</span>
         </p>
 
-        {/* Main Action Block */}
         <div className="mt-10 flex flex-col items-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <Button
-  variant="gold"
-  size="lg"
-  className="px-12 py-7 text-lg font-medium tracking-tight rounded-full transition-all hover:scale-105">
-  Join Waitlist
-</Button>
+            variant="gold"
+            size="lg"
+            onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
+            className="px-12 py-7 text-lg font-medium tracking-tight rounded-full transition-all hover:scale-105">
+            Join Waitlist
+          </Button>
 
-          {/* Social Proof (The 'Join 1,200+' style) */}
           <p className="font-sans text-sm text-primary-foreground/50 tracking-tight">
             Join <span className="text-primary-foreground/80 font-medium">1,200+ travelers</span> planning their next journey
           </p>
         </div>
       </div>
 
-      {/* ── Scroll hint ── */}
       <button
         onClick={scrollToNext}
         className="absolute bottom-10 z-10 flex flex-col items-center gap-2 group opacity-50 hover:opacity-100 transition-opacity">
