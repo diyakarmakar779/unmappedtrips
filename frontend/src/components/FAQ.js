@@ -1,112 +1,82 @@
-import { ShieldCheck, Zap, Layers3 } from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from './ui/accordion';
 
-const features = [
+const faqs = [
   {
-    id: 'concierge-coordination',
-    icon: ShieldCheck,
-    title: 'Concierge Coordination',
-    desc: 'Beyond booking. We act as the central tether for your logistics, stays, and transit.',
+    q: 'What exactly is a "Travel OS"?',
+    a: 'Unlike a static travel agency, Unmapped is a coordinated system. We act as the central intelligence for your journey—consolidating your bookings, optimizing your routes, and managing your logistics in one unified, thoughtful stream.',
   },
   {
-    id: 'data-unification',
-    icon: Layers3,
-    title: 'Data Unification',
-    desc: 'Send us your external bookings from any platform. We sync them into one cohesive route.',
+    q: 'How does the Concierge Coordination work?',
+    a: "Once you share your vision, our concierge team takes over. We don't just plan; we manage. From syncing external bookings to real-time adjustments, the system ensures your itinerary stays fluid and curated around how you travel.",
   },
   {
-    id: 'agentic-insight',
-    icon: Zap,
-    title: 'Agentic Insight',
-    desc: 'AI-powered research refined by human curation to ensure your vibe is never compromised.',
+    q: 'Can I import bookings from other platforms?',
+    a: 'Yes. That is a core function of the OS. Whether you book through Goibibo, Airbnb, or direct, you can sync those details with us. We unify them into your master Unmapped route so everything is managed in one place.',
+  },
+  {
+    q: 'How do I start the process?',
+    a: "Fill out the 2-minute vision brief. We'll reach out on WhatsApp within 24 hours to sync on your 'Preferred Vibe' and logistics. Your first coordinated trip plan is shared within 24–48 hours.",
+  },
+  {
+    q: 'Is the first trip plan really free?',
+    a: 'Correct. We want you to experience the clarity of a coordinated journey. Your initial personalized route—including curated stays and optimized transit—is provided at no cost.',
+  },
+  {
+    q: 'Do you handle solo and group travel?',
+    a: 'While our system is highly optimized for the complexity of solo travel, the concierge service is designed to coordinate couples and small groups who value a deeper, more refined travel experience.',
   },
 ];
 
-export const WhatIsUnmapped = () => {
+export const FAQ = () => {
   return (
-    <section 
-      id="what-is-unmapped" 
-      className="relative py-24 md:py-40 bg-[#f8f8f6] overflow-hidden" 
+    <section
+      id="faq"
+      className="relative py-24 md:py-32 bg-[#0a120a] overflow-hidden"
     >
-      <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none" 
-           style={{ backgroundImage: `radial-gradient(#1a2e1a 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
+      {/* Subtle designer accent: Deep forest glow */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#c5a383]/[0.03] blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           
-          {/* ── VISUAL ASSET (Left) ── */}
-          <div className="relative order-2 lg:order-1">
-            <div className="relative z-10 aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.25)] border-[12px] border-white">
-              <img
-                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop" 
-                alt="Vision of the Northeast"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#1a2e1a]/40 via-transparent to-white/10 mix-blend-multiply" />
-            </div>
-
-            {/* THE CONCIERGE CARD */}
-            <div className="absolute -bottom-8 -right-4 md:-right-16 p-6 rounded-[2rem] bg-[#0a120a]/90 backdrop-blur-3xl border border-white/10 shadow-2xl max-w-[260px] z-20 transition-transform duration-500 hover:scale-105">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="h-2 w-2 rounded-full bg-[#c5a383] animate-pulse" />
-                <span className="text-[9px] uppercase tracking-[0.4em] text-white/50 font-bold">
-                  Concierge Active
-                </span>
-              </div>
-              
-              <p className="font-serif italic text-lg text-white/90 leading-tight mb-6">
-                "Your logistics, coordinated by the system."
-              </p>
-              
-              <div className="flex justify-between items-center border-t border-white/10 pt-4">
-                <p className="text-[9px] text-[#c5a383] font-mono tracking-[0.2em]">
-                  MEMBER SYNC // 24/7
-                </p>
-                <div className="flex gap-1.5">
-                  <div className="w-1.5 h-1.5 rounded-full bg-white/40" />
-                  <div className="w-1.5 h-1.5 rounded-full bg-white/10" />
-                </div>
-              </div>
-            </div>
+          {/* ── Left Content ── */}
+          <div className="lg:sticky lg:top-32 space-y-6">
+            <span className="font-sans text-[11px] uppercase tracking-[0.5em] text-[#c5a383] font-bold">
+              The Protocol
+            </span>
+            <h2 className="font-serif italic font-light text-5xl md:text-7xl text-white tracking-tighter leading-tight">
+              Common <br />
+              <span className="text-white/20">enquiries.</span>
+            </h2>
+            <p className="font-sans text-white/40 text-sm md:text-base leading-relaxed max-w-sm">
+              If you have a specific requirement or a unique travel style, 
+              mention it in the waitlist form. We answer every enquiry personally via WhatsApp.
+            </p>
           </div>
 
-          {/* ── CONTENT (Right) ── */}
-          <div className="flex flex-col gap-12 order-1 lg:order-2">
-            <div className="space-y-8">
-              <div className="space-y-3">
-                <span className="text-[11px] uppercase tracking-[0.5em] text-black/30 font-bold block">
-                  The Travel OS
-                </span>
-                <h2 className="font-serif italic font-light text-5xl md:text-8xl text-[#1a2e1a] tracking-tighter leading-[0.95]">
-                  Managed <br />
-                  <span className="text-black/10">not just planned.</span>
-                </h2>
-              </div>
-
-              <p className="font-sans text-xl text-black/50 leading-relaxed max-w-md">
-                Unmapped is a high-touch environment where concierge expertise meets system efficiency to <span className="text-[#1a2e1a] font-semibold italic">centralize your entire journey.</span> 
-              </p>
-            </div>
-
-            <div className="grid gap-8">
-              {features.map((item) => {
-                const FeatureIcon = item.icon;
-                return (
-                  <div key={item.id} className="flex gap-6 group items-start border-l-2 border-transparent hover:border-[#c5a383]/40 pl-6 transition-all duration-300">
-                    <div className="shrink-0 mt-1 text-[#1a2e1a]/40 group-hover:text-[#1a2e1a]">
-                      <FeatureIcon size={20} strokeWidth={1.5} />
-                    </div>
-                    <div className="space-y-1">
-                      <h4 className="font-sans text-sm font-bold text-black/80 uppercase tracking-widest">
-                        {item.title}
-                      </h4>
-                      <p className="font-sans text-sm text-black/40 leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+          {/* ── Right Accordion ── */}
+          <div className="w-full">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`faq-${i}`}
+                  className="group rounded-[2rem] border border-white/5 bg-white/[0.02] px-8 transition-all duration-300 data-[state=open]:bg-white/[0.04] data-[state=open]:border-white/10"
+                >
+                  <AccordionTrigger className="font-sans text-base md:text-lg font-medium text-white/70 py-7 hover:no-underline hover:text-white transition-colors text-left tracking-tight">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="font-sans text-sm md:text-base text-white/40 leading-relaxed pb-7">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </div>
