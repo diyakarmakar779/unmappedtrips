@@ -4,84 +4,88 @@ import { GOOGLE_FORM_URL } from '../constants';
 
 export const Hero = () => {
   const scrollToNext = () => {
-    const nextSection = document.getElementById('what-is-unmapped');
-    nextSection?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('what-is-unmapped')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center grain-overlay overflow-hidden bg-[#070a07] font-sans">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#070a07]">
       
-      {/* ── Background Image: Full Vibrancy ── */}
+      {/* ── Background: High-Fidelity Rendering ── */}
       <div className="absolute inset-0 z-0">
         <img
           src="/hero-bg.png" 
           alt="Unmapped Travel OS"
-          className="w-full h-full object-cover scale-105" // Slight scale to prevent edge gaps
-          loading="eager" 
+          className="w-full h-full object-cover"
+          loading="eager"
+          style={{ 
+            // Fixes "dullness" by preventing browser-side softening
+            imageRendering: 'crisp-edges',
+            transform: 'translateZ(0)',
+            filter: 'contrast(1.05) brightness(0.95)' // Tiny boost to make it pop
+          }} 
         />
         
-        {/* REFINED OVERLAY: Instead of a flat dark color, we use a 
-            "Vignette" that stays clear in the center and only darkens the edges.
+        {/* REFINED SCRIM: Only darkens the very top and very bottom.
+            The center (where the image content is) stays clear and vibrant.
         */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 z-10"
           style={{ 
-            background: 'radial-gradient(circle at center, rgba(7,10,7,0.1) 0%, rgba(7,10,7,0.4) 50%, rgba(7,10,7,0.9) 100%)' 
+            background: `linear-gradient(to bottom, 
+              rgba(7, 10, 7, 0.5) 0%, 
+              transparent 30%, 
+              transparent 70%, 
+              rgba(7, 10, 7, 0.8) 100%)` 
           }} 
         />
       </div>
 
-      {/* ── Content Area: Focused & High-Contrast ── */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto px-6">
+      {/* ── Grain Overlay: Keep this light! ── */}
+      <div className="absolute inset-0 z-20 opacity-[0.03] pointer-events-none grain-overlay" />
+
+      {/* ── Content: Focused & Consistent ── */}
+      <div className="relative z-30 flex flex-col items-center text-center max-w-5xl mx-auto px-6">
         
-        {/* Minimalist Badge */}
+        {/* Minimal Badge */}
         <div className="mb-8 animate-fade-in">
-          <span className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase tracking-[0.25em] font-medium text-white/80 backdrop-blur-md">
+          <span className="px-3 py-1 rounded-full bg-white/10 border border-white/10 text-[9px] uppercase tracking-[0.3em] font-medium text-white/80 backdrop-blur-md">
             Early Access Open
           </span>
         </div>
 
-        {/* Headline: Using Inter + Tight Tracking for that "Apple" feel */}
-        <h1 className="font-sans font-bold text-5xl md:text-7xl lg:text-[5.8rem] text-white tracking-tighter leading-[1.02] animate-fade-in-up">
-          Travel OS for <br className="hidden md:block" />
-          <span className="text-white/90 font-medium italic">Indian Explorers</span>
+        {/* The Mixed-Typography Header */}
+        <h1 className="flex flex-col items-center gap-1 animate-fade-in-up">
+          <span className="font-sans font-medium text-5xl md:text-7xl lg:text-[5rem] text-white tracking-tighter leading-none">
+            Travel OS for
+          </span>
+          <span className="font-serif italic font-light text-4xl md:text-6xl lg:text-[4.5rem] text-white/90 tracking-tight">
+            Indian Explorers
+          </span>
         </h1>
 
-        {/* Sub-headline: Increased contrast and cleaner line breaks */}
-        <p className="mt-8 font-sans text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          Coordinate your entire journey. Manage stays, local routes, and budgets. 
-          <span className="block mt-2 text-white/50">Deep cultural immersion, powered by local wisdom.</span>
+        <p className="mt-8 font-sans text-base md:text-lg text-white/70 max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          Coordinate your entire journey. Manage stays, local routes, and budgets—all in one thoughtful system.
         </p>
 
-        {/* Action Block: The White Button Upgrade */}
-        <div className="mt-12 flex flex-col items-center gap-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          
+        {/* Refined White Button */}
+        <div className="mt-10 flex flex-col items-center gap-5 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <Button
             onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-            className="bg-white text-black hover:bg-white/90 px-14 py-8 text-lg font-semibold tracking-tight rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+            className="bg-white text-black hover:bg-[#f8f8f8] px-10 py-6 text-base font-semibold tracking-tight rounded-full transition-all hover:scale-[1.03] shadow-2xl">
             Join Waitlist
           </Button>
 
-          {/* Social Proof */}
-          <div className="flex items-center gap-3">
-            <div className="flex -space-x-2">
-              {[1,2,3].map(i => (
-                <div key={i} className="w-6 h-6 rounded-full border-2 border-[#070a07] bg-white/20 backdrop-blur-sm" />
-              ))}
-            </div>
-            <p className="text-sm text-white/40 font-medium tracking-tight">
-              Join <span className="text-white/80">1,200+ travelers</span> on the journey
-            </p>
-          </div>
+          <p className="text-[11px] text-white/40 font-medium tracking-widest uppercase">
+            Join <span className="text-white/70">1,200+ pioneers</span>
+          </p>
         </div>
       </div>
 
       {/* Scroll Hint */}
       <button
         onClick={scrollToNext}
-        className="absolute bottom-10 z-10 flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-all duration-500">
-        <span className="text-[9px] uppercase tracking-[0.4em] text-white">Discover</span>
-        <ArrowDown size={18} className="text-white animate-bounce" />
+        className="absolute bottom-10 z-30 opacity-40 hover:opacity-100 transition-opacity">
+        <ArrowDown size={20} className="text-white animate-bounce" />
       </button>
     </section>
   );
