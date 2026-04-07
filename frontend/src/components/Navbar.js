@@ -13,11 +13,6 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    setMenuOpen(false);
-  };
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
@@ -41,23 +36,8 @@ export const Navbar = () => {
           </span>
         </button>
 
-        {/* ── Desktop Nav ── */}
-        <div className="hidden md:flex items-center gap-10">
-          {[
-            { label: 'How it works', id: 'how-it-works' },
-            { label: 'Destinations', id: 'destinations' },
-            { label: 'Our approach', id: 'our-approach' },
-          ].map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollTo(item.id)}
-              className="font-sans text-sm tracking-tight text-white/50 hover:text-white transition-colors duration-300"
-            >
-              {item.label}
-            </button>
-          ))}
-          
-          {/* ── Glassmorphic Morphing Button ── */}
+        {/* ── Action Button (Desktop) ── */}
+        <div className="hidden md:block">
           <Button
             onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
             className={`px-6 py-5 text-sm font-medium tracking-tight rounded-full transition-all duration-500 ${
@@ -66,11 +46,11 @@ export const Navbar = () => {
                 : 'bg-white/10 text-white border border-white/10 backdrop-blur-md hover:bg-white/20'
             }`}
           >
-            Reserve your spot
+            Join waitlist
           </Button>
         </div>
 
-        {/* Mobile menu toggle */}
+        {/* Mobile menu toggle (Only for the CTA on small screens) */}
         <button
           className="md:hidden text-white p-2"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -79,18 +59,9 @@ export const Navbar = () => {
         </button>
       </nav>
 
-      {/* ── Mobile Menu ── */}
+      {/* ── Mobile Menu (Simplified) ── */}
       {menuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-[#070a07] border-b border-white/5 p-8 flex flex-col gap-8 animate-in fade-in slide-in-from-top-2">
-           {['How it works', 'Destinations', 'Our approach'].map((label) => (
-              <button
-                key={label}
-                onClick={() => scrollTo(label.toLowerCase().replace(/ /g, '-'))}
-                className="text-left font-sans text-sm text-white/60"
-              >
-                {label}
-              </button>
-            ))}
+        <div className="md:hidden absolute top-full left-0 right-0 bg-[#070a07] border-b border-white/5 p-8 animate-in fade-in slide-in-from-top-2">
             <Button
               onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
               className="w-full bg-white text-black py-6 rounded-full text-sm font-semibold"
