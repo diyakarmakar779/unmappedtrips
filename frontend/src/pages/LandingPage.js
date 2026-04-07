@@ -21,11 +21,11 @@ export default function LandingPage() {
       <Navbar />
       <Hero />
       <WhatIsUnmapped />
-      <WhatYouGet />
+      // <WhatYouGet />
       <HowItWorks />
-      <WhyDifferent />
+      // <WhyDifferent />
       <Destinations />
-      <EarlyAccess />
+      // <EarlyAccess />
       <FAQ />
       <FinalCTA />
       <Footer />
