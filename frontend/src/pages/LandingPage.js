@@ -25,7 +25,6 @@ export default function LandingPage() {
       <Destinations />
       <FAQ />
       <Footer />
-      <StickyMobileCTA />
     </main>
   );
 }
