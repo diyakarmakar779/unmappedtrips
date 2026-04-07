@@ -65,7 +65,7 @@ export const Hero = () => {
 
         <p className="mt-8 font-sans text-base md:text-lg text-white/70 max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           Your concierge for the Northeast, powered by a thoughtful system. 
-          <span className="block mt-1 text-white/50">Itineraries, stays, and bookings—coordinated for you.</span>
+          <span className="block mt-1 text-white/50">Itineraries, stays, and bookings coordinated for you.</span>
         </p>
 
         {/* Refined White Button */}
