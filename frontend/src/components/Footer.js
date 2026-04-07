@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     // bg-[#070a07] matches your FAQ exactly. 
     // border-white/10 provides the visible segregation line you asked for.
-    <footer className="bg-[#070a07] py-16 md:py-24 border-t border-white/10">
+    <footer className="bg-[#0a120a] py-16 md:py-24 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
         
         {/* ── PRIMARY LINKS (Increased size for legibility) ── */}
