@@ -1,126 +1,78 @@
+import Image from 'next/image';
 import { Button } from './ui/button';
-import { ArrowDown, MapPin } from 'lucide-react';
-import { GOOGLE_FORM_URL, CTA_MICROCOPY } from '../constants';
+import { ArrowDown } from 'lucide-react';
+import { GOOGLE_FORM_URL } from '../constants';
 
 export const Hero = () => {
   const scrollToNext = () => {
-    document.getElementById('what-is-unmapped')?.scrollIntoView({ behavior: 'smooth' });
+    const nextSection = document.getElementById('what-is-unmapped');
+    nextSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col grain-overlay overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center grain-overlay overflow-hidden bg-[#0A0E0A]">
       {/* ── Background Image ── */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.pexels.com/photos/12883589/pexels-photo-12883589.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          alt="Lush green misty forest of Northeast India"
-          className="w-full h-full object-cover hero-parallax-img" />
-
-        {/* Main bottom-up scrim — very dark where text lives */}
+      <div className="absolute inset-0 z-0 opacity-60">
+        <Image
+          src="/hero-bg.png" 
+          alt="Travel OS Background"
+          fill
+          priority
+          quality={90}
+          className="object-cover hero-parallax-img"
+        />
+        {/* Deep centered radial gradient for that 'Banking/SaaS' focus */}
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, transparent 0%, hsl(120 33% 8% / 0.30) 30%, hsl(120 33% 8% / 0.70) 58%, hsl(120 33% 8% / 0.88) 100%)' }} />
-
-        {/* Left-side vignette for additional text backdrop */}
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(to right, hsl(120 33% 8% / 0.35) 0%, transparent 55%)' }} />
-
+          style={{ background: 'radial-gradient(circle at center, transparent 0%, rgba(10, 14, 10, 0.8) 100%)' }} />
       </div>
 
-      {/* ── Hero Content ── */}
-      <div className="relative z-10 flex flex-col justify-end flex-1 max-w-6xl mx-auto w-full px-6 md:px-10 pt-20 pb-20 md:pb-28">
-
-        {/* Eyebrow */}
-        <div className="animate-fade-in" style={{ animationDelay: '0.15s' }}>
-          <span className="tracking-editorial text-primary-foreground/65">
-            Travel OS for India
+      {/* ── Content Container (SaaS/Banking Format) ── */}
+      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto px-6">
+        
+        {/* Badge / Eyebrow */}
+        <div className="mb-6 animate-fade-in">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-foreground/5 border border-primary-foreground/10 text-[10px] uppercase tracking-widest text-primary-foreground/70">
+            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+            Early Access Open
           </span>
         </div>
 
-        {/* Main headline */}
-        <h1
-          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-light text-primary-foreground mt-5 leading-tight max-w-4xl animate-fade-in-up"
-          style={{ animationDelay: '0.25s' }}>
+        {/* Main Title (Using Inter/Sans-serif for the 'SaaS' look) */}
+       <h1 className="font-sans font-semibold text-5xl md:text-7xl lg:text-[5.5rem] text-primary-foreground tracking-tighter leading-[1.1] animate-fade-in-up">
+  Travel OS for 
+  <span className="block italic font-light opacity-90 tracking-tight">Indian Explorers</span>
+</h1>
 
-          Concept trips.
-          <br />
-          Cultural deep dives.
-          <br />
-          <em className="font-light">Curated for how you travel.</em>
-        </h1>
-{/* Positioning line */}
-<p
-  className="mt-5 font-sans text-base md:text-lg font-light max-w-2xl leading-relaxed animate-fade-in-up"
-  style={{ color: 'rgba(245, 240, 228, 0.92)', animationDelay: '0.4s' }}
->
-  A travel OS that coordinates your itinerary, stays, budget, and bookings into one thoughtful trip.
-</p>
-
-        {/* Trust cue */}
-        <p
-          className="mt-4 font-sans text-sm flex items-center gap-2 animate-fade-in"
-          style={{ color: 'rgba(212, 165, 116, 0.95)', animationDelay: '0.55s' }}>
-
-          <MapPin size={13} style={{ color: '#D4A574' }} className="shrink-0" />
-          Backed by local wisdom and the shared adventures of our travel community.
+        {/* Sub-headline (The 'Banking' format: short, punchy, functional) */}
+        <p className="mt-8 font-sans text-lg md:text-xl font-light text-primary-foreground/80 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          Coordinate your entire journey. Manage stays, local routes, and budgets. 
+          <span className="md:block"> Deep cultural immersion, powered by local wisdom.</span>
         </p>
 
-        {/* CTA block */}
-        <div
-          className="mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-4 animate-fade-in-up"
-          style={{ animationDelay: '0.65s' }}>
-
+        {/* Main Action Block */}
+        <div className="mt-10 flex flex-col items-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <Button
-            variant="gold"
-            size="lg"
-            onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-            className="btn-pulse">
+  variant="gold"
+  size="lg"
+  className="px-12 py-7 text-lg font-medium tracking-tight rounded-full transition-all hover:scale-105">
+  Join Waitlist
+</Button>
 
-            Be among the first 50
-          </Button>
-          {/* <Button
-            variant="ghost-light"
-            size="lg"
-            onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}>
-
-            Join early access
-          </Button> */}
-        </div>
-
-        <p
-          className="mt-3 font-sans text-xs text-primary-foreground/50 animate-fade-in"
-          style={{ animationDelay: '0.8s' }}>
-
-         Full trip coordination for your first Unmapped journey
-        </p>
-
-        {/* Urgency badge */}
-        <div
-          className="mt-7 inline-flex items-center gap-2.5 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/18 rounded-full px-4 py-2 w-fit animate-fade-in"
-          style={{ animationDelay: '0.95s' }}>
-
-          <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-          <span className="font-sans text-xs tracking-wide !text-[#F9F8F5]">
-            First 50 early access spots — now open
-          </span>
+          {/* Social Proof (The 'Join 1,200+' style) */}
+          <p className="font-sans text-sm text-primary-foreground/50 tracking-tight">
+            Join <span className="text-primary-foreground/80 font-medium">1,200+ travelers</span> planning their next journey
+          </p>
         </div>
       </div>
 
       {/* ── Scroll hint ── */}
       <button
         onClick={scrollToNext}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 group"
-        aria-label="Scroll down">
-
-        <span className="tracking-editorial text-primary-foreground/45 group-hover:text-primary-foreground/65 transition-colors duration-200">
-          Discover
-        </span>
-        <ArrowDown
-          size={14}
-          className="text-primary-foreground/45 group-hover:text-primary-foreground/65 animate-bounce transition-colors duration-200" />
-
+        className="absolute bottom-10 z-10 flex flex-col items-center gap-2 group opacity-50 hover:opacity-100 transition-opacity">
+        <span className="text-[10px] uppercase tracking-[0.2em] text-primary-foreground">Discover</span>
+        <ArrowDown size={16} className="text-primary-foreground animate-bounce" />
       </button>
-    </section>);
-
+    </section>
+  );
 };
