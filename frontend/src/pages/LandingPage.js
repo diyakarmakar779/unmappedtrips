@@ -21,13 +21,9 @@ export default function LandingPage() {
       <Navbar />
       <Hero />
       <WhatIsUnmapped />
-      // <WhatYouGet />
       <HowItWorks />
-      // <WhyDifferent />
       <Destinations />
-      // <EarlyAccess />
       <FAQ />
-      // <FinalCTA />
       <Footer />
       <StickyMobileCTA />
     </main>
