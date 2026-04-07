@@ -7,28 +7,24 @@ import {
 
 const faqs = [
   {
-    q: 'How do I join early access?',
-    a: "Fill in the short form — it takes about 2 minutes. We'll reach out on WhatsApp within 24–48 hours to learn more about your trip and start shaping your plan.",
+    q: 'How do I join the waitlist?',
+    a: "Fill in the short form—it takes about 2 minutes. We'll reach out on WhatsApp within 24–48 hours to discuss your upcoming travel plans and how the system can coordinate them.",
   },
   {
-    q: 'What do early users get?',
-    a: 'Early access members get priority trip access, closer planning support, and first access to new destinations and curated drops. Once all 50 spots are claimed, early access closes.',
+    q: 'What does "Travel OS" actually mean?',
+    a: 'Unmapped is a Travel Operating System. It’s a coordinated way to travel where AI handles the heavy lifting—research, routing, and logistics—while human insight ensures the plan feels personal and culturally rich.',
   },
   {
-    q: 'What does Travel OS actually mean?',
-    a: 'Unmapped is a Travel OS for thoughtful trips. AI helps behind the scenes with research, routing, budgets, and trip structuring, while human curation refines the final plan around your travel style.',
+    q: 'What do early members get?',
+    a: 'You get priority access to our coordination system, direct planning support for your first few journeys, and first-look access to new destinations and curated travel "drops" before they go public.',
   },
   {
-    q: 'Which destinations are you starting with?',
-    a: 'We are starting with Meghalaya and Sikkim. More destinations across India will follow, and early access helps us shape what comes next.',
+    q: 'Is this only for solo travelers?',
+    a: 'While our system is built for the complexity of solo and small-group travel, we also coordinate trips for couples and families looking for a more thoughtful, less "touristy" experience.',
   },
   {
-    q: 'What happens after I sign up?',
-    a: "We'll reach out on WhatsApp within 24–48 hours, understand your travel style and plans, and begin shaping a coordinated trip plan around them.",
-  },
-  {
-    q: 'Do you plan trips for families and spiritual travelers?',
-    a: 'Yes. While our primary focus is solo travelers, couples, and small groups, we also plan trips for families and spiritual journeys. Just mention your travel style in the form.',
+    q: 'Which destinations are active now?',
+    a: 'We are currently active in Meghalaya and Sikkim. We are expanding seasonally to places like Spiti, Hampi, and Coorg based on member feedback.',
   },
 ];
 
@@ -36,40 +32,42 @@ export const FAQ = () => {
   return (
     <section
       id="faq"
-      className="section-pad bg-background grain-overlay"
+      className="relative py-24 md:py-32 bg-[#0a120a] overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+      {/* Subtle background glow to match "How It Works" */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#c5a383]/[0.02] blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          
           {/* Left — sticky label */}
-          <div className="md:sticky md:top-32 fade-left">
-            <span className="tracking-editorial text-muted-foreground">
-              Questions
+          <div className="lg:sticky lg:top-32 space-y-6">
+            <span className="font-sans text-[11px] uppercase tracking-[0.4em] text-[#c5a383]">
+              Information
             </span>
-            <div className="gold-divider mt-3 mb-5" />
-            <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground leading-snug">
-              Things people
-              <br />
-              <em>usually ask.</em>
+            <h2 className="font-serif italic font-light text-4xl md:text-6xl text-white tracking-tighter leading-tight">
+              Common <br />
+              <span className="text-white/30">enquiries.</span>
             </h2>
-            <p className="mt-5 font-sans text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Still have a question? Mention it in the early-access form and
-              we will answer personally on WhatsApp.
+            <p className="font-sans text-white/40 text-sm leading-relaxed max-w-sm">
+              If you have a specific requirement or a unique travel style, 
+              mention it in the waitlist form. We answer every enquiry personally.
             </p>
           </div>
 
           {/* Right — accordion */}
-          <div className="fade-right">
-            <Accordion type="single" collapsible className="space-y-3">
+          <div className="w-full">
+            <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, i) => (
                 <AccordionItem
                   key={i}
                   value={`faq-${i}`}
-                  className="rounded-xl border border-border bg-card px-5 shadow-card data-[state=open]:shadow-hover"
+                  className="group rounded-2xl border border-white/5 bg-white/[0.02] px-6 transition-all duration-300 data-[state=open]:bg-white/[0.04] data-[state=open]:border-white/10"
                 >
-                  <AccordionTrigger className="font-serif text-lg font-medium text-foreground py-5 hover:no-underline hover:text-forest transition-colors duration-200 text-left">
+                  <AccordionTrigger className="font-sans text-base md:text-lg font-medium text-white/80 py-6 hover:no-underline hover:text-white transition-colors text-left tracking-tight">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="font-sans text-sm text-muted-foreground leading-relaxed pb-5">
+                  <AccordionContent className="font-sans text-sm md:text-base text-white/40 leading-relaxed pb-6">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
