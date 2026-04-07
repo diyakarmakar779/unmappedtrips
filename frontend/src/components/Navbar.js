@@ -8,7 +8,7 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 48);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -20,38 +20,30 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-card border-b border-border'
-          : 'bg-transparent'
+          ? 'bg-[#070a07]/80 backdrop-blur-xl border-b border-white/5 py-3'
+          : 'bg-transparent py-5'
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
-        {/* Logo */}
+      <nav className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
+        
+        {/* ── Logo: Editorial Lettermark ── */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center gap-2.5 group"
-          aria-label="Go to top"
+          className="flex items-center gap-3 group"
+          aria-label="Unmapped Home"
         >
-          <span
-            className="h-7 w-7 rounded-full border-2 border-accent flex items-center justify-center"
-            style={{ background: 'hsl(var(--forest))' }}
-          >
-            <span className="text-primary-foreground font-serif text-sm font-semibold leading-none">
-              U
-            </span>
-          </span>
-          <span
-            className={`font-serif text-xl font-semibold tracking-tight transition-colors duration-200 ${
-              scrolled ? 'text-foreground' : 'text-primary-foreground'
-            }`}
-          >
+          <div className="relative flex items-center justify-center h-8 w-8 rounded-full border border-white/20 transition-all group-hover:border-white/40">
+            <span className="font-serif text-sm text-white font-light mt-0.5">U</span>
+          </div>
+          <span className="font-serif text-xl text-white tracking-tight font-light">
             Unmapped
           </span>
         </button>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* ── Desktop Nav: Tech-Minimalist ── */}
+        <div className="hidden md:flex items-center gap-10">
           {[
             { label: 'How it works', id: 'how-it-works' },
             { label: 'Destinations', id: 'destinations' },
@@ -60,18 +52,16 @@ export const Navbar = () => {
             <button
               key={item.id}
               onClick={() => scrollTo(item.id)}
-              className={`font-sans text-sm font-medium transition-colors duration-200 hover:text-accent ${
-                scrolled ? 'text-muted-foreground' : 'text-primary-foreground/80'
-              }`}
+              className="font-sans text-[11px] uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors duration-300"
             >
               {item.label}
             </button>
           ))}
+          
+          {/* ── The White Waitlist Button ── */}
           <Button
-            variant="earthy"
-            size="sm"
             onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-            className="btn-pulse"
+            className="bg-white text-black hover:bg-white/90 px-6 py-5 text-xs font-semibold tracking-wide rounded-full transition-all hover:scale-[1.03] active:scale-95"
           >
             Reserve your spot
           </Button>
@@ -79,48 +69,32 @@ export const Navbar = () => {
 
         {/* Mobile menu toggle */}
         <button
-          className={`md:hidden p-2 transition-colors duration-200 ${
-            scrolled ? 'text-foreground' : 'text-primary-foreground'
-          }`}
+          className="md:hidden text-white p-2"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
         >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </nav>
 
-      {/* Mobile Dropdown */}
+      {/* ── Mobile Dropdown: Deep Forest Blur ── */}
       {menuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-card border-b border-border shadow-hover animate-fade-in">
-          <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col gap-5">
-            {[
-              { label: 'How it works', id: 'how-it-works' },
-              { label: 'Destinations', id: 'destinations' },
-              { label: 'Our approach', id: 'our-approach' },
-              { label: 'Early access', id: 'early-access' },
-              { label: 'FAQ', id: 'faq' },
-            ].map((item) => (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-[#070a07] border-b border-white/5 animate-in fade-in slide-in-from-top-4 duration-300">
+          <div className="px-8 py-10 flex flex-col gap-8">
+            {['How it works', 'Destinations', 'Our approach'].map((label) => (
               <button
-                key={item.id}
-                onClick={() => scrollTo(item.id)}
-                className="text-left font-sans text-base text-foreground font-medium hover:text-forest transition-colors duration-150"
+                key={label}
+                onClick={() => scrollTo(label.toLowerCase().replace(/ /g, '-'))}
+                className="text-left font-sans text-xs uppercase tracking-[0.3em] text-white/70"
               >
-                {item.label}
+                {label}
               </button>
             ))}
             <Button
-              variant="earthy"
-              onClick={() => {
-                window.open(GOOGLE_FORM_URL, '_blank');
-                setMenuOpen(false);
-              }}
-              className="w-full mt-1"
+              onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
+              className="w-full bg-white text-black py-7 rounded-full text-sm font-bold"
             >
               Reserve your spot
             </Button>
-            <p className="font-sans text-xs text-muted-foreground text-center -mt-1">
-              You'll be redirected to a quick early-access form.
-            </p>
           </div>
         </div>
       )}
