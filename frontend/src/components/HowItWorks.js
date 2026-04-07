@@ -1,6 +1,4 @@
-import { Button } from './ui/button';
 import { MessageSquare, Compass, BookOpen } from 'lucide-react';
-import { GOOGLE_FORM_URL } from '../constants';
 
 const steps = [
   {
@@ -35,7 +33,7 @@ export const HowItWorks = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
         
         {/* ── Header ── */}
-        <div className="max-w-2xl mx-auto text-center mb-20 space-y-4">
+        <div className="max-w-2xl mx-auto text-center mb-24 space-y-4">
           <span className="font-sans text-[11px] uppercase tracking-[0.4em] text-[#c5a383]">
             The Process
           </span>
@@ -50,9 +48,9 @@ export const HowItWorks = () => {
         </div>
 
         {/* ── Steps ── */}
-        <div className="grid md:grid-cols-3 gap-12 md:gap-8 relative">
+        <div className="grid md:grid-cols-3 gap-16 md:gap-8 relative">
           
-          {/* Connector line (Desktop) - Matching the Bronze Palette */}
+          {/* Connector line (Desktop) */}
           <div className="hidden md:block absolute top-12 left-[15%] right-[15%] h-px bg-gradient-to-r from-transparent via-[#c5a383]/30 to-transparent" />
 
           {steps.map((step, i) => {
@@ -83,16 +81,10 @@ export const HowItWorks = () => {
           })}
         </div>
 
-        {/* ── Mid-page CTA ── */}
-        <div className="mt-20 flex flex-col items-center gap-6">
-          <Button
-            onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-            className="bg-white text-black hover:bg-white/90 px-10 py-7 text-sm font-bold uppercase tracking-widest rounded-full transition-transform hover:scale-[1.03] shadow-2xl"
-          >
-            Join Waitlist
-          </Button>
-          <p className="font-sans text-[10px] uppercase tracking-[0.2em] text-white/20">
-            Full trip coordination for your first journey
+        {/* ── Section Closer (Subtle Microcopy instead of a Button) ── */}
+        <div className="mt-24 text-center">
+          <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-white/20">
+            Automated Logistics • Human Insight • One System
           </p>
         </div>
       </div>
