@@ -108,39 +108,19 @@ export const Hero = () => {
 
         {/* The Mixed-Typography Header */}
 
-       <h1 className="flex flex-col items-center gap-1 animate-fade-in-up">
-
-
-
-          <span className="font-sans font-medium text-5xl md:text-7xl lg:text-[5.5rem] text-white tracking-tighter leading-none">
-
-
-
-            Travel OS for
-
-
-
-          </span>
-
-
-
-          {/* Pulling the serif line up slightly for a tighter lockup */}
-
-
-
-          <span className="font-serif italic font-light text-4xl md:text-6xl lg:text-[5rem] text-white/90 tracking-tight -mt-2">
-
-
-
-            Thoughtful Journeys
-
-
-
-          </span>
-
-
-
-        </h1>
+      <h1 className="flex flex-col items-center gap-2 md:gap-3 animate-fade-in-up">
+  <span className="font-sans font-medium text-5xl md:text-7xl lg:text-[5.5rem] text-white tracking-tighter leading-none">
+    Travel OS for
+  </span>
+  
+  {/* Removed -mt-2 to prevent the lines from clashing. 
+    A small positive mt-1 acts as a "manual" optical adjustment 
+    to account for the italic slant.
+  */}
+  <span className="font-serif italic font-light text-4xl md:text-6xl lg:text-[5rem] text-white/90 tracking-tight mt-1">
+    Thoughtful Journeys
+  </span>
+</h1>
 
 
         <p className="mt-8 font-sans text-base md:text-lg text-white/70 max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
