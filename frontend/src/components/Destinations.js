@@ -1,6 +1,4 @@
-import { Button } from './ui/button';
 import { MapPin, Compass } from 'lucide-react';
-import { GOOGLE_FORM_URL, CTA_MICROCOPY } from '../constants';
 
 const destinations = [
   {
@@ -33,84 +31,82 @@ export const Destinations = () => {
   return (
     <section
       id="destinations"
-      className="section-pad bg-background grain-overlay"
+      className="relative py-24 md:py-32 bg-[#f2f2f0]"
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-          <div className="fade-up">
-            <span className="tracking-editorial text-muted-foreground">
-              Where we start
+      <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+        
+        {/* ── Header ── */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+          <div className="max-w-xl space-y-4">
+            <span className="font-sans text-[11px] uppercase tracking-[0.4em] text-black/30">
+              The Collection
             </span>
-            <div className="gold-divider mt-3 mb-5" />
-            <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground leading-snug">
-              Northeast India,
-              <br />
-              <em>done right.</em>
+            <h2 className="font-serif italic font-light text-4xl md:text-6xl text-[#0a120a] tracking-tighter leading-tight">
+              Northeast India, <br />
+              <span className="opacity-30">curated for the system.</span>
             </h2>
           </div>
-          <p className="fade-up font-sans text-sm text-muted-foreground max-w-xs leading-relaxed md:text-right">
-            We're starting with destinations where our curation is deepest and most refined.
+          <p className="font-sans text-sm text-black/50 max-w-[280px] leading-relaxed border-l border-black/10 pl-6">
+            We begin where our curation is deepest, ensuring every route is refined before departure.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* ── Cards ── */}
+        <div className="grid md:grid-cols-3 gap-8 md:gap-6">
           {destinations.map((dest, i) => (
             <div
               key={i}
-              className={`fade-up card-hover rounded-xl overflow-hidden bg-card shadow-card border border-border flex flex-col ${
-                dest.status === 'soon' ? 'opacity-70' : ''
+              className={`group relative flex flex-col bg-white rounded-[2rem] overflow-hidden border border-black/[0.03] shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 ${
+                dest.status === 'soon' ? 'grayscale-[0.5] opacity-80' : ''
               }`}
-              style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              {/* Image */}
-              <div className="img-zoom-wrap h-52 md:h-60 relative">
+              {/* Image Wrap */}
+              <div className="relative h-72 overflow-hidden">
                 <img
                   src={dest.image}
                   alt={dest.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
-                {dest.status === 'soon' && (
-                  <div className="absolute inset-0 bg-foreground/35 flex items-center justify-center">
-                    <span className="font-sans text-xs tracking-widest uppercase text-primary-foreground/90 bg-foreground/60 px-3 py-1.5 rounded-full">
-                      Coming Soon
+                
+                {/* Status Badges */}
+                <div className="absolute top-6 right-6">
+                  {dest.status === 'available' ? (
+                    <span className="flex items-center gap-2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-white shadow-sm text-[10px] font-bold uppercase tracking-widest text-[#0a120a]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#c5a383] animate-pulse" />
+                      Open
                     </span>
-                  </div>
-                )}
-                {dest.status === 'available' && (
-                  <div className="absolute top-4 right-4">
-                    <span className="flex items-center gap-1.5 bg-primary-foreground/90 backdrop-blur-sm text-forest border border-forest/20 text-xs px-2.5 py-1 rounded-full font-medium">
-                      <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                      Now open
+                  ) : (
+                    <span className="bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white">
+                      In Pipeline
                     </span>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-1 gap-3">
-                <div>
-                  <h3 className="font-serif text-2xl font-medium text-foreground">
+              <div className="p-8 flex flex-col flex-1 gap-6">
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-[#c5a383]">
+                    <MapPin size={12} />
+                    <span className="text-[10px] font-bold uppercase tracking-widest opacity-80">{dest.tag}</span>
+                  </div>
+                  <h3 className="font-serif text-3xl text-[#0a120a]">
                     {dest.name}
                   </h3>
-                  <p className="font-sans text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
-                    <MapPin size={10} /> {dest.tag}
-                  </p>
                 </div>
 
-                <p className="font-sans text-sm text-muted-foreground leading-relaxed flex-1">
+                <p className="font-sans text-sm text-black/50 leading-relaxed">
                   {dest.desc}
                 </p>
 
                 {/* Concept tags */}
-                <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {dest.concepts.map((c, j) => (
                     <span
                       key={j}
-                      className="font-sans text-xs bg-muted text-muted-foreground px-2.5 py-1 rounded-full flex items-center gap-1"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/[0.03] border border-black/[0.03] text-[10px] font-medium text-black/40"
                     >
-                      <Compass size={9} className="text-forest" />
+                      <Compass size={10} className="text-[#c5a383]" />
                       {c}
                     </span>
                   ))}
@@ -120,17 +116,10 @@ export const Destinations = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-14 flex flex-col items-center gap-3 fade-up">
-          <Button
-            variant="earthy"
-            size="lg"
-            onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-          >
-            Reserve your spot
-          </Button>
-          <p className="font-sans text-xs text-muted-foreground">
-            {CTA_MICROCOPY}
+        {/* ── Closer ── */}
+        <div className="mt-24 text-center">
+          <p className="font-sans text-[11px] uppercase tracking-[0.3em] text-black/20">
+            More destinations unlocking seasonally
           </p>
         </div>
       </div>
