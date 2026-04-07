@@ -5,111 +5,62 @@ export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0a120a] border-t border-white/5 relative overflow-hidden">
-      {/* Subtle organic glow in the corner to match the hero/cta */}
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/[0.02] blur-[100px] rounded-full pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-20 relative z-10">
-        <div className="grid md:grid-cols-3 gap-16 md:gap-24">
-          
-          {/* ── Brand ── */}
-          <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-3 group">
-              <div className="h-8 w-8 rounded-full border border-white/20 flex items-center justify-center transition-all group-hover:border-white/40">
-                <span className="font-serif text-sm text-white font-light">u</span>
-              </div>
-              <span className="font-serif text-xl text-white tracking-tight font-light">
-                Unmapped
-              </span>
-            </div>
-            
-            <p className="font-sans text-sm leading-relaxed text-white/40 max-w-xs">
-              A Travel OS for thoughtful journeys across India. Powered by AI and refined by human curation.
-            </p>
-
-            {/* Social */}
-            <div className="flex items-center gap-4">
-              {[
-                {
-                  icon: Instagram,
-                  label: 'Instagram',
-                  href: 'https://www.instagram.com/unmapped.travel_/',
-                },
-                {
-                  icon: Mail,
-                  label: 'Email',
-                  href: 'mailto:hello@unmappedtrips.in',
-                },
-              ].map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                    className="text-white/30 hover:text-[#c5a383] transition-colors duration-300"
-                  >
-                    <Icon size={18} />
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* ── Navigate (Updated with FAQ) ── */}
-          <div>
-            <p className="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-white/20 mb-8">
-              Navigate
-            </p>
-            <ul className="space-y-4">
-              {[
-                { label: 'The System', id: 'what-is-unmapped' },
-                { label: 'What you get', id: 'what-you-get' },
-                { label: 'Destinations', id: 'destinations' },
-                { label: 'FAQ', id: 'faq' },
-              ].map((item) => (
-                <li key={item.id}>
-                  <button
-                    type="button"
-                    onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' })}
-                    className="font-sans text-sm text-white/40 hover:text-white transition-colors duration-300"
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* ── CTA ── */}
-          <div className="flex flex-col gap-6">
-            <p className="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-white/20">
-              Priority Access
-            </p>
-            <p className="font-sans text-sm leading-relaxed text-white/40">
-              Join the waitlist to receive updates on new destinations and early member benefits.
-            </p>
-            <button
-              onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-              className="group flex items-center gap-2 font-sans text-sm font-semibold text-white hover:text-[#c5a383] transition-colors duration-300 w-fit"
-            >
-              Join Waitlist
-              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </button>
+    <footer className="bg-[#f8f8f6] py-24 md:py-32 border-t border-black/[0.03]">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col items-center">
+        
+        {/* ── CENTRAL LOGO ── */}
+        <div className="mb-12 group cursor-default">
+          <div className="flex flex-col items-center">
+            <span className="font-serif italic text-3xl md:text-4xl tracking-tighter text-[#1a2e1a] transition-transform duration-500 group-hover:scale-105">
+              Unmapped
+            </span>
+            <div className="h-px w-8 bg-[#c5a383]/30 mt-2 transition-all duration-500 group-hover:w-12" />
           </div>
         </div>
 
-        {/* ── Bottom Bar ── */}
-        <div className="mt-24 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <p className="font-sans text-[10px] tracking-widest uppercase text-white/20">
-            © {year} Unmapped. Designed for the curious.
+        {/* ── CENTERED CONNECT LINKS ── */}
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 mb-20">
+          <a 
+            href="mailto:hello@unmappedtrips.in" 
+            className="group flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] font-bold text-black/40 hover:text-[#1a2e1a] transition-all"
+          >
+            <Mail size={14} strokeWidth={1.5} className="text-black/20 group-hover:text-[#c5a383] transition-colors" />
+            <span>Email</span>
+          </a>
+          
+          <a 
+            href="https://www.instagram.com/unmapped.travel_/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="group flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] font-bold text-black/40 hover:text-[#1a2e1a] transition-all"
+          >
+            <Instagram size={14} strokeWidth={1.5} className="text-black/20 group-hover:text-[#c5a383] transition-colors" />
+            <span>Instagram</span>
+          </a>
+
+          <button
+            onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
+            className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#c5a383] hover:text-[#1a2e1a] transition-all border-b border-[#c5a383]/20 pb-1"
+          >
+            Join Waitlist
+          </button>
+        </div>
+
+        {/* ── FINAL SIGN-OFF ── */}
+        <div className="w-full max-w-md text-center space-y-6">
+          <p className="font-serif italic text-xl md:text-2xl text-[#1a2e1a]/40 leading-relaxed">
+            "Curating the quiet corners of India."
           </p>
-          <div className="h-px w-8 bg-white/10 hidden sm:block" />
-          <p className="font-sans text-[10px] tracking-widest uppercase text-white/20 text-center sm:text-right">
-            Curating the quiet corners of India
-          </p>
+          
+          <div className="pt-8 border-t border-black/[0.03] flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6">
+            <p className="text-[9px] uppercase tracking-[0.5em] text-black/20 font-bold">
+              © {year} Unmapped
+            </p>
+            <span className="hidden md:block w-1 h-1 rounded-full bg-black/10" />
+            <p className="text-[9px] uppercase tracking-[0.5em] text-black/20 font-bold">
+              Designed for the curious
+            </p>
+          </div>
         </div>
       </div>
     </footer>
