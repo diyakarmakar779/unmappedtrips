@@ -27,7 +27,7 @@ export default function LandingPage() {
       <Destinations />
       // <EarlyAccess />
       <FAQ />
-      <FinalCTA />
+      // <FinalCTA />
       <Footer />
       <StickyMobileCTA />
     </main>
