@@ -1,63 +1,50 @@
-import { Instagram, Mail } from 'lucide-react';
 import { GOOGLE_FORM_URL } from '../constants';
 
 export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#f8f8f6] py-12 md:py-16 border-t border-black/[0.03]">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col items-center">
+    <footer className="bg-[#f8f8f6] py-14 md:py-20 border-t border-black/[0.02]">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
         
-        {/* ── CENTRAL LOGO (Scaled Down) ── */}
-        <div className="mb-8 group cursor-default">
-          <div className="flex flex-col items-center">
-            <span className="font-serif italic text-2xl md:text-3xl tracking-tighter text-[#1a2e1a] transition-transform duration-500 group-hover:scale-105">
-              Unmapped
-            </span>
-            <div className="h-px w-6 bg-[#c5a383]/30 mt-1 transition-all duration-500 group-hover:w-10" />
-          </div>
-        </div>
-
-        {/* ── CENTERED CONNECT LINKS (Tighter spacing) ── */}
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 mb-10">
+        {/* ── PRIMARY LINKS (Increased to 12px for legibility) ── */}
+        <div className="flex flex-row items-center gap-10 md:gap-16 mb-12">
           <a 
             href="mailto:hello@unmappedtrips.in" 
-            className="group flex items-center gap-2 text-[9px] uppercase tracking-[0.3em] font-bold text-black/40 hover:text-[#1a2e1a] transition-all"
+            className="text-xs uppercase tracking-[0.25em] font-bold text-black/40 hover:text-[#1a2e1a] transition-colors"
           >
-            <Mail size={12} strokeWidth={1.5} className="text-black/20 group-hover:text-[#c5a383] transition-colors" />
-            <span>Email</span>
+            Email
           </a>
           
           <a 
             href="https://www.instagram.com/unmapped.travel_/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="group flex items-center gap-2 text-[9px] uppercase tracking-[0.3em] font-bold text-black/40 hover:text-[#1a2e1a] transition-all"
+            className="text-xs uppercase tracking-[0.25em] font-bold text-black/40 hover:text-[#1a2e1a] transition-colors"
           >
-            <Instagram size={12} strokeWidth={1.5} className="text-black/20 group-hover:text-[#c5a383] transition-colors" />
-            <span>Instagram</span>
+            Instagram
           </a>
 
           <button
             onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-            className="text-[9px] uppercase tracking-[0.3em] font-bold text-[#c5a383] hover:text-[#1a2e1a] transition-all border-b border-[#c5a383]/20 pb-0.5"
+            className="text-xs uppercase tracking-[0.25em] font-bold text-[#c5a383] hover:text-[#1a2e1a] transition-colors"
           >
-            Join Waitlist
+            Waitlist
           </button>
         </div>
 
-        {/* ── FINAL SIGN-OFF (More Compact) ── */}
-        <div className="w-full max-w-xl text-center space-y-4">
-          <p className="font-serif italic text-base md:text-lg text-[#1a2e1a]/30">
-            "Curating the quiet corners of India."
+        {/* ── SIGNATURE (Refined sizes) ── */}
+        <div className="text-center space-y-5">
+          <p className="font-serif italic text-lg md:text-xl text-[#1a2e1a]/30">
+            Curating the quiet corners of India.
           </p>
           
-          <div className="pt-6 border-t border-black/[0.03] flex flex-row items-center justify-center gap-4">
-            <p className="text-[8px] uppercase tracking-[0.4em] text-black/20 font-bold whitespace-nowrap">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 pt-4 border-t border-black/[0.03]">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-black/20 font-bold">
               © {year} Unmapped
             </p>
-            <span className="w-1 h-1 rounded-full bg-black/10" />
-            <p className="text-[8px] uppercase tracking-[0.4em] text-black/20 font-bold whitespace-nowrap">
+            <span className="hidden md:block w-1 h-1 rounded-full bg-black/5" />
+            <p className="text-[10px] uppercase tracking-[0.3em] text-black/20 font-bold">
               Designed for the curious
             </p>
           </div>
