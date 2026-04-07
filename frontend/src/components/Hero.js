@@ -72,8 +72,8 @@ export const Hero = () => {
         <div className="mt-10 flex flex-col items-center gap-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <Button
             onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-            className="bg-white text-black hover:bg-[#f8f8f8] px-12 py-7 text-lg font-semibold tracking-tight rounded-full transition-all hover:scale-[1.03] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-            Join Waitlist
+            className="bg-white text-black hover:bg-[#f8f8f8] px-12 py-7 text-lg font-medium tracking-tight rounded-full transition-all hover:scale-[1.03] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+            Join waitlist
           </Button>
 
           <p className="font-sans text-xs md:text-sm text-white/40 tracking-tight">
