@@ -45,7 +45,7 @@ export const Navbar = () => {
                 : 'bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white/25'
             }`}
           >
-            Join the waitlist
+            Join waitlist
           </Button>
         </div>
       </div>
