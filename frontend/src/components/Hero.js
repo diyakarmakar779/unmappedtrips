@@ -54,7 +54,7 @@ export const Hero = () => {
 
         {/* The Mixed-Typography Header */}
         <h1 className="flex flex-col items-center gap-1 animate-fade-in-up">
-          <span className="font-sans font-bold text-5xl md:text-7xl lg:text-[5.5rem] text-white tracking-tighter leading-none">
+          <span className="font-sans font-medium text-5xl md:text-7xl lg:text-[5.5rem] text-white tracking-tighter leading-none">
             Travel OS for
           </span>
           {/* Pulling the serif line up slightly for a tighter lockup */}
