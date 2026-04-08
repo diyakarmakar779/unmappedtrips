@@ -1,23 +1,24 @@
+import React from 'react';
 import { ShieldCheck, Zap, Layers3 } from 'lucide-react';
 
 const features = [
   {
-    id: 'concierge-coordination',
+    id: 'unified-itinerary',
     icon: ShieldCheck,
-    title: 'Unified Itinerary',
-    desc: 'The end of tab-fatigue. Consolidate your flights, hotel bookings, and daily activities into one cohesive route. No more digging through emails; your entire world is on one screen.',
+    title: 'One Home for Everything',
+    desc: 'The end of tab-fatigue. We unify your flights, hotel bookings, and daily activities into one simple, cohesive route.',
   },
   {
-    id: 'data-unification',
+    id: 'travel-tools',
     icon: Layers3,
     title: 'Integrated Travel Tools',
-    desc: 'Everything you need, built-in. Track your expenses, manage your budget, and follow custom packing lists without leaving the system. We’ve built the tools so you can focus on the trail.',
+    desc: 'Everything you need, built-in. Track expenses, manage your budget, and follow custom packing lists without leaving the system.',
   },
   {
-    id: 'agentic-insight',
+    id: 'ai-assistant',
     icon: Zap,
     title: 'AI Travel Assistant',
-    desc: 'A partner who knows your vibe. Our AI doesn’t just plan; it learns. Get real-time assistance and suggestions tailored to your taste, ensuring every detour is worth the drive.',
+    desc: 'A partner who knows your vibe. Our AI learns your taste to provide real-time suggestions, ensuring every detour is worth the drive.',
   },
 ];
 
@@ -27,6 +28,7 @@ export const WhatIsUnmapped = () => {
       id="what-is-unmapped" 
       className="relative py-24 md:py-40 bg-[#f8f8f6] overflow-hidden" 
     >
+      {/* Background Texture */}
       <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none" 
            style={{ backgroundImage: `radial-gradient(#1a2e1a 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
 
@@ -49,17 +51,17 @@ export const WhatIsUnmapped = () => {
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-2 w-2 rounded-full bg-[#c5a383] animate-pulse" />
                 <span className="text-[9px] uppercase tracking-[0.4em] text-white/50 font-bold">
-                  Concierge Active
+                  System Active
                 </span>
               </div>
               
               <p className="font-serif italic text-lg text-white/90 leading-tight mb-6">
-                "Your logistics, coordinated by the system."
+                "Every detail unified. Every mile managed."
               </p>
               
               <div className="flex justify-between items-center border-t border-white/10 pt-4">
                 <p className="text-[9px] text-[#c5a383] font-mono tracking-[0.2em]">
-                  MEMBER SYNC // 24/7
+                  OS SYNC // 24/7
                 </p>
                 <div className="flex gap-1.5">
                   <div className="w-1.5 h-1.5 rounded-full bg-white/40" />
@@ -74,7 +76,7 @@ export const WhatIsUnmapped = () => {
             <div className="space-y-8">
               <div className="space-y-3">
                 <span className="text-[11px] uppercase tracking-[0.5em] text-black/30 font-bold block">
-                  The Travel OS
+                  India's First Travel OS
                 </span>
                 <h2 className="font-serif italic font-light text-5xl md:text-8xl text-[#1a2e1a] tracking-tighter leading-[0.95]">
                   Managed <br />
@@ -82,8 +84,11 @@ export const WhatIsUnmapped = () => {
                 </h2>
               </div>
 
+              {/* FIXED SYNTAX HERE: Added closing tags */}
               <p className="font-sans text-xl text-black/50 leading-relaxed max-w-md">
-Unmapped is India’s first Travel OS the single platform that unifies every step of your trip. From the first spark of an idea to the final mile back home, all roads lead here.            </div>
+                Unmapped is the single platform that unifies every step of your trip. From the first spark of an idea to the final mile back home, all roads lead here.
+              </p> 
+            </div>
 
             <div className="grid gap-8">
               {features.map((item) => {
@@ -106,6 +111,8 @@ Unmapped is India’s first Travel OS the single platform that unifies every ste
               })}
             </div>
           </div>
+          {/* ── END CONTENT ── */}
+
         </div>
       </div>
     </section>
