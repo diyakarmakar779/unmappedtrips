@@ -51,7 +51,7 @@ export const FAQ = () => {
             </span>
             <h2 className="font-serif italic font-light text-5xl md:text-7xl text-white tracking-tighter leading-tight">
               Common <br />
-              <span className="text-white/20">enquiries.</span>
+              <span className="text-white/30">enquiries.</span>
             </h2>
             <p className="font-sans text-white/40 text-sm md:text-base leading-relaxed max-w-sm">
               If you have a specific requirement or a unique travel style, 
