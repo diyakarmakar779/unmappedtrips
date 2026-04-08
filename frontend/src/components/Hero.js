@@ -125,7 +125,7 @@ export const Hero = () => {
 
       <p className="mt-8 font-sans text-base md:text-lg text-white/70 max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
   India’s first platform to unify every step of your trip from scattered bookings to on-ground execution.
-  <span className="block mt-2 text-white/50 border-l border-white/20 pl-4">
+  <span className="block mt-2 text-white/50 ">
     A system designed for depth, not just distance.
   </span>
 </p>
