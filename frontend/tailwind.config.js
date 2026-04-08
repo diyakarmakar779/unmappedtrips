@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         serif:  ['Cormorant Garamond', 'Georgia', 'serif'],
         sans:   ['Inter', 'system-ui', 'sans-serif'],
+        brand: ['Montserrat', 'sans-serif'],
       },
       borderRadius: {
         lg:  'var(--radius)',
