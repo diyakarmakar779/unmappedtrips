@@ -4,20 +4,20 @@ const features = [
   {
     id: 'concierge-coordination',
     icon: ShieldCheck,
-    title: 'On-Ground Support',
-    desc: 'We don’t just plan; we stay with you. For our curated trips, we handle the actual coordination—managing your cars, stays, and daily flow so you don’t have to worry about a thing.',
+    title: 'Unified Itinerary',
+    desc: 'The end of tab-fatigue. Consolidate your flights, hotel bookings, and daily activities into one cohesive route. No more digging through emails; your entire world is on one screen.',
   },
   {
     id: 'data-unification',
     icon: Layers3,
-    title: 'One Home for Everything',
-    desc: 'Bring it all together. Forward your flight or hotel bookings from any app to us. Our system pulls everything into one simple, easy-to-follow screen. No more digging through your inbox.',
+    title: 'Integrated Travel Tools',
+    desc: 'Everything you need, built-in. Track your expenses, manage your budget, and follow custom packing lists without leaving the system. We’ve built the tools so you can focus on the trail.',
   },
   {
     id: 'agentic-insight',
     icon: Zap,
-    title: 'Smart & Hand-Picked',
-    desc: 'Tech-driven, human-approved. We use smart AI to find the best routes and hidden spots, then personally check every detail to make sure the vibe is exactly what you want.',
+    title: 'AI Travel Assistant',
+    desc: 'A partner who knows your vibe. Our AI doesn’t just plan; it learns. Get real-time assistance and suggestions tailored to your taste, ensuring every detour is worth the drive.',
   },
 ];
 
@@ -83,8 +83,7 @@ export const WhatIsUnmapped = () => {
               </div>
 
               <p className="font-sans text-xl text-black/50 leading-relaxed max-w-md">
-Unmapped is the single home for your journey. Whether we are hosting your trip or you are using our system to unify your own, we handle the logistical noise so you can find the harmony.              </p>
-            </div>
+Unmapped is India’s first Travel OS the single platform that unifies every step of your trip. From the first spark of an idea to the final mile back home, all roads lead here.            </div>
 
             <div className="grid gap-8">
               {features.map((item) => {
