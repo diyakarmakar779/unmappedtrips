@@ -4,20 +4,20 @@ const features = [
   {
     id: 'concierge-coordination',
     icon: ShieldCheck,
-    title: 'Concierge Coordination',
-    desc: 'Beyond booking. We act as the central tether for your logistics, stays, and transit.',
+    title: 'On-Ground Support',
+    desc: 'We don’t just plan; we stay with you. For our curated trips, we handle the actual coordination—managing your cars, stays, and daily flow so you don’t have to worry about a thing.',
   },
   {
     id: 'data-unification',
     icon: Layers3,
-    title: 'Data Unification',
-    desc: 'Send us your external bookings from any platform. We sync them into one cohesive route.',
+    title: 'One Home for Everything',
+    desc: 'Bring it all together. Forward your flight or hotel bookings from any app to us. Our system pulls everything into one simple, easy-to-follow screen. No more digging through your inbox.',
   },
   {
     id: 'agentic-insight',
     icon: Zap,
-    title: 'Agentic Insight',
-    desc: 'AI-powered research refined by human curation to ensure your vibe is never compromised.',
+    title: 'Smart & Hand-Picked',
+    desc: 'Tech-driven, human-approved. We use smart AI to find the best routes and hidden spots, then personally check every detail to make sure the vibe is exactly what you want.',
   },
 ];
 
@@ -83,8 +83,7 @@ export const WhatIsUnmapped = () => {
               </div>
 
               <p className="font-sans text-xl text-black/50 leading-relaxed max-w-md">
-                Unmapped is a high-touch environment where concierge expertise meets system efficiency to <span className="text-[#1a2e1a] font-semibold italic">centralize your entire journey.</span> 
-              </p>
+Unmapped is the single home for your journey. Whether we are hosting your trip or you are using our system to unify your own, we handle the logistical noise so you can find the harmony.              </p>
             </div>
 
             <div className="grid gap-8">
