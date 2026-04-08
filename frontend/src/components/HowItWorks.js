@@ -4,20 +4,20 @@ const steps = [
   {
     number: '01',
     icon: MessageSquare,
-    title: 'Share the vision',
-    desc: 'Tell us your destination, dates, and the specific vibe you’re seeking. It takes two minutes.',
+    title: 'Set the Intent',
+    desc: 'Tell us where you want to go and the vibe you’re seeking. In two minutes, the OS starts architecting your entire journey.',
   },
   {
     number: '02',
     icon: Compass,
     title: 'System Coordination',
-    desc: 'The Travel OS builds your route, matching AI-powered efficiency with human curation.',
+    desc: 'The OS builds your command center—syncing AI-powered efficiency with human-curated stays and transit.',
   },
   {
     number: '03',
     icon: BookOpen,
-    title: 'Seamless Departure',
-    desc: 'Receive a coordinated journey with stays, transport, and logistics handled. Just go.',
+    title: 'One-Screen Execution',
+    desc: 'Receive your unified route. Your flights, stays, tools, and real-time assistant are now in one home. Just go.',
   },
 ];
 
@@ -42,8 +42,7 @@ export const HowItWorks = () => {
             <span className="text-white/40">Organised by the system.</span>
           </h2>
           <p className="font-sans text-white/50 text-base md:text-lg leading-relaxed max-w-lg mx-auto">
-            You define the journey; the Travel OS handles the coordination of itinerary, 
-            stays, transport, and logistics.
+            Stop juggling ten apps. The Travel OS unifies your itinerary, expenses, and logistics into one managed flow.
           </p>
         </div>
 
@@ -84,7 +83,7 @@ export const HowItWorks = () => {
         {/* ── Section Closer (Subtle Microcopy instead of a Button) ── */}
         <div className="mt-24 text-center">
           <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-white/20">
-            Automated Logistics • Human Insight • One System
+            Unified Logistics • Built-in Tools • One Command Center
           </p>
         </div>
       </div>
