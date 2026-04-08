@@ -78,7 +78,7 @@ export const WhatIsUnmapped = () => {
                 </span>
                 <h2 className="font-serif italic font-light text-5xl md:text-8xl text-[#1a2e1a] tracking-tighter leading-[0.95]">
                   Managed <br />
-                  <span className="text-black/10">not just planned.</span>
+                  <span className="text-black/20">not just planned.</span>
                 </h2>
               </div>
 
