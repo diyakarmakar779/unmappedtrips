@@ -135,7 +135,7 @@ export const Hero = () => {
 
         {/* Refined White Button */}
 
-        <div className="mt-10 flex flex-col items-center gap-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+        <div className="mt-10 flex flex-col items-center gap-3 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
 
          <Button
             onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
