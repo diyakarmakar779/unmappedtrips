@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -8,27 +9,27 @@ import {
 const faqs = [
   {
     q: 'What exactly is a "Travel OS"?',
-    a: 'Unlike a static travel agency, Unmapped is a coordinated system. We act as the central intelligence for your journey—consolidating your bookings, optimizing your routes, and managing your logistics in one unified, thoughtful stream.',
+    a: 'Most people travel with their plans scattered across ten different apps. Unmapped brings your flights, hotels, and daily plans into one single home. It’s a "Command Center" for your trip that keeps everything simple and in one place.',
   },
   {
-    q: 'How does the Concierge Coordination work?',
-    a: "Once you share your vision, our concierge team takes over. We don't just plan; we manage. From syncing external bookings to real-time adjustments, the system ensures your itinerary stays fluid and curated around how you travel.",
+    q: 'How do I get my bookings into Unmapped?',
+    a: "It’s effortless. Just forward your confirmation emails or screenshots to us. We’ll organize the details into your master route so you don’t have to hunt for PDFs or PNRs ever again.",
   },
   {
-    q: 'Can I import bookings from other platforms?',
-    a: 'Yes. That is a core function of the OS. Whether you book through Goibibo, Airbnb, or direct, you can sync those details with us. We unify them into your master Unmapped route so everything is managed in one place.',
+    q: 'Is this just an app or a real person helping me?',
+    a: 'It’s both. Our system handles the organization, but our team personally hand-picks every stay and route. In the Northeast, we stay in the loop to make sure your car arrives and your trip stays smooth.',
   },
   {
-    q: 'How do I start the process?',
-    a: "Fill out the 2-minute vision brief. We'll reach out on WhatsApp within 24 hours to sync on your 'Preferred Vibe' and logistics. Your first coordinated trip plan is shared within 24–48 hours.",
+    q: 'How do I start?',
+    a: "Fill out the 2-minute brief on our site. We’ll reach out on WhatsApp to understand your style and send you a complete, easy-to-read trip plan within 48 hours.",
   },
   {
-    q: 'Is the first trip plan really free?',
-    a: 'Correct. We want you to experience the clarity of a coordinated journey. Your initial personalized route—including curated stays and optimized transit—is provided at no cost.',
+    q: 'Can it help with my budget and packing?',
+    a: 'Yes. We have simple tools built-in to track your expenses and give you a custom packing list based on where you’re going. You won’t need to switch between different apps anymore.',
   },
   {
-    q: 'Do you handle solo and group travel?',
-    a: 'While our system is highly optimized for the complexity of solo travel, the concierge service is designed to coordinate couples and small groups who value a deeper, more refined travel experience.',
+    q: 'Is the first plan really free?',
+    a: 'Yes. We want you to experience what it feels like to have a trip that’s fully organized and managed. Your first personalized route is on us, with no strings attached.',
   },
 ];
 
@@ -46,16 +47,17 @@ export const FAQ = () => {
           
           {/* ── Left Content ── */}
           <div className="lg:sticky lg:top-32 space-y-6">
-            <span className="font-sans text-[11px] uppercase tracking-[0.5em] text-[#c5a383] font-bold">
-              The Protocol
-            </span>
-            <h2 className="font-serif italic font-light text-5xl md:text-7xl text-white tracking-tighter leading-tight">
-              Common <br />
-              <span className="text-white/30">enquiries.</span>
-            </h2>
+            <div className="space-y-2">
+               <span className="font-sans text-[11px] uppercase tracking-[0.5em] text-[#c5a383] font-bold">
+                The Protocol
+              </span>
+              <h2 className="font-serif italic font-light text-5xl md:text-7xl text-white tracking-tighter leading-tight">
+                System <br />
+                <span className="text-white/30">Intelligence.</span>
+              </h2>
+            </div>
             <p className="font-sans text-white/40 text-sm md:text-base leading-relaxed max-w-sm">
-              If you have a specific requirement or a unique travel style, 
-              mention it in the waitlist form. We answer every enquiry personally via WhatsApp.
+              One platform to replace the chaos. If you have a specific requirement for your journey, mention it in the brief. We respond to every sync personally.
             </p>
           </div>
 
