@@ -26,14 +26,18 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-10 h-full flex items-center justify-between">
         
         {/* ── LOGO (Color shifts for visibility) ── */}
-        <a href="/" className="flex items-center gap-2 group">
-          <span className={`font-serif italic text-2xl md:text-3xl tracking-tighter transition-colors duration-500 ${
-            isScrolled ? 'text-[#1a2e1a]' : 'text-white'
-          }`}>
-            Unmapped
-          </span>
-          <div className="h-1 w-1 rounded-full bg-[#c5a383] animate-pulse" />
-        </a>
+        <a href="/" className="flex items-center gap-1.5 group">
+  <span className={`font-brand font-bold text-xl md:text-2xl tracking-tighter uppercase transition-colors duration-500 ${
+    isScrolled ? 'text-[#1a2e1a]' : 'text-white'
+  }`}>
+    Unmapped
+  </span>
+  
+  {/* The "System" Pulse - Adjusted size and color to match the gold in your config */}
+  <div className={`h-1.5 w-1.5 rounded-full bg-gold animate-pulse mt-1 transition-colors duration-500 ${
+    isScrolled ? 'opacity-80' : 'opacity-100'
+  }`} />
+</a>
 
         {/* ── ACTION (Glassmorphic to Solid) ── */}
         <div className="flex items-center">
