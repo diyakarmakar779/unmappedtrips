@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Compass } from 'lucide-react';
+import { GOOGLE_FORM_URL } from '../constants';
 
 const destinations = [
   {
