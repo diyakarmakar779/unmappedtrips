@@ -12,13 +12,13 @@ const features = [
     id: 'travel-tools',
     icon: Layers3,
     title: 'No more travel juggling',
-    desc: 'Track expenses, manage packing, and stay organized — without switching between apps mid-trip.',
+    desc: 'Track expenses, manage packing, and stay organized without switching between apps mid-trip.',
   },
   {
     id: 'ai-assistant',
     icon: Zap,
     title: 'Plans that adapt',
-    desc: 'Weather changes, delays happen — your trip adjusts in real time so you don’t have to.',
+    desc: 'Weather changes, delays happen your trip adjusts in real time so you don’t have to.',
   },
 ];
 
@@ -86,7 +86,7 @@ export const WhatIsUnmapped = () => {
 
               <p className="font-sans text-base text-black/50 leading-relaxed max-w-md">
                 No more digging through emails, switching apps, or second-guessing plans. 
-                Everything is where it should be — exactly when you need it.
+                Everything is where it should be exactly when you need it.
               </p> 
             </div>
 
