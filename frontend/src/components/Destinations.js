@@ -5,23 +5,23 @@ const destinations = [
   {
     name: 'Meghalaya',
     tag: 'Northeast India // 01',
-    desc: "A module built for depth. Explore living root bridges and turquoise rivers through a system-managed route that prioritizes slow, intentional travel.",
+    desc: 'We handle your Meghalaya trip end-to-end. From stays and transport to local routes, everything is planned, booked, and managed for you.',
     image: 'https://images.pexels.com/photos/19469039/pexels-photo-19469039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    concepts: ['Scenic slow trips', 'Cultural deep dives', 'Hidden waterfall routes'],
+    concepts: ['Waterfall routes', 'Local stays', 'Slow travel'],
     status: 'available',
   },
   {
     name: 'Sikkim',
     tag: 'Eastern Himalayas // 02',
-    desc: 'Ancient monasteries and alpine lakes synced into a seamless itinerary. Experience the quiet shadow of Kangchenjunga with zero logistical noise.',
+    desc: 'Your Sikkim trip, without the stress. Permits, routes, and stays, we take care of everything so you can just experience the mountains.',
     image: 'https://images.pexels.com/photos/32010298/pexels-photo-32010298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    concepts: ['Mountain monastery trails', 'Hidden-route concepts', 'Cultural deep dives'],
+    concepts: ['Mountain routes', 'Monasteries', 'Scenic drives'],
     status: 'available',
   },
   {
     name: 'Expansion',
     tag: 'System Update',
-    desc: 'Spiti Valley, Coorg, and Hampi are currently being mapped into the system. Our founding members help shape the next modules we unlock.',
+    desc: 'Spiti, Coorg, and Hampi are next. Early users help shape where Unmapped goes deeper next.',
     image: 'https://images.unsplash.com/photo-1752318080519-442bf251f28f?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85',
     concepts: ['Spiti Valley', 'Coorg', 'Hampi'],
     status: 'mapping',
@@ -36,23 +36,25 @@ export const Destinations = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
         
-        {/* ── Header ── */}
+        {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
           <div className="max-w-xl space-y-4">
             <span className="font-sans text-[11px] uppercase tracking-[0.4em] text-black/30">
-              The Collection
+              Where we go deep
             </span>
             <h2 className="font-serif italic font-light text-4xl md:text-6xl text-[#0a120a] tracking-tighter leading-tight">
-              Active Routes, <br />
-              <span className="opacity-30">managed by the OS.</span>
+              Trips we personally manage,<br />
+              <span className="opacity-30">not just list.</span>
             </h2>
           </div>
+
           <p className="font-sans text-sm text-black/50 max-w-[280px] leading-relaxed border-l border-black/10 pl-6">
-            We begin in the Northeast, where our curation is deepest. Every route is a pre-synced system ready for departure.
+            We’re starting with the Northeast.
+            Every trip here is handled end-to-end by our team.
           </p>
         </div>
 
-        {/* ── Cards ── */}
+        {/* Cards */}
         <div className="grid md:grid-cols-3 gap-8 md:gap-6">
           {destinations.map((dest, i) => (
             <div
@@ -61,7 +63,7 @@ export const Destinations = () => {
                 dest.status === 'mapping' ? 'grayscale-[0.5] opacity-80' : ''
               }`}
             >
-              {/* Image Wrap */}
+              {/* Image */}
               <div className="relative h-72 overflow-hidden">
                 <img
                   src={dest.image}
@@ -69,12 +71,12 @@ export const Destinations = () => {
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 
-                {/* Status Badges */}
+                {/* Status Badge */}
                 <div className="absolute top-6 right-6">
                   {dest.status === 'available' ? (
                     <span className="flex items-center gap-2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-white shadow-sm text-[10px] font-bold uppercase tracking-widest text-[#0a120a]">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#c5a383] animate-pulse" />
-                      System Live
+                      Concierge Active
                     </span>
                   ) : (
                     <span className="bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white">
@@ -100,8 +102,8 @@ export const Destinations = () => {
                   {dest.desc}
                 </p>
 
-                {/* Concept tags */}
-                <div className="flex flex-wrap gap-2 mt-auto">
+                {/* Concepts */}
+                <div className="flex flex-wrap gap-2">
                   {dest.concepts.map((c, j) => (
                     <span
                       key={j}
@@ -112,15 +114,27 @@ export const Destinations = () => {
                     </span>
                   ))}
                 </div>
+
+                {/* CTA (NEW - HIGH IMPACT) */}
+                {dest.status === 'available' && (
+                  <div className="mt-auto pt-4">
+                    <p className="text-[10px] uppercase tracking-widest text-[#c5a383] mb-2">
+                      Limited slots available
+                    </p>
+                    <button className="w-full py-2 text-sm border border-black/20 rounded-lg hover:bg-black hover:text-white transition">
+                      Request Access
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
 
-        {/* ── Closer ── */}
+        {/* Footer */}
         <div className="mt-24 text-center">
           <p className="font-sans text-[11px] uppercase tracking-[0.3em] text-black/20">
-            All roads lead to Unmapped. More modules unlocking seasonally.
+            New regions unlocking based on early travelers
           </p>
         </div>
       </div>
