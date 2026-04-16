@@ -20,8 +20,8 @@ const faqs = [
     a: 'Simply upload your tickets, forward confirmation emails, or send screenshots. We extract everything and build your trip timeline automatically.',
   },
   {
-    q: 'Is there real human support?',
-    a: 'Yes. Especially for destinations like Meghalaya and Sikkim, we actively help coordinate stays, routes, and local logistics to keep your trip smooth.',
+    q: 'Do you support during the trip?',
+    a: 'Yes. We stay involved throughout your trip — coordinating stays, routes, and local logistics so everything runs smoothly.',
   },
   {
     q: 'What makes this different from other travel apps?',
@@ -36,7 +36,6 @@ const faqs = [
     a: 'Your first trip setup is free. For deeper concierge support, custom routes, and on-ground coordination, we offer paid plans.',
   },
 ];
-
 export const FAQ = () => {
   return (
     <section
