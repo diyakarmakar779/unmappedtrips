@@ -5,20 +5,20 @@ const features = [
   {
     id: 'unified-itinerary',
     icon: ShieldCheck,
-    title: 'One Home for Everything',
-    desc: 'The end of tab-fatigue. We unify your flights, hotel bookings, and daily activities into one simple, cohesive route.',
+    title: 'Everything in one place',
+    desc: 'Know what’s next without thinking twice. Flights, stays, and plans flow together in one simple timeline.',
   },
   {
     id: 'travel-tools',
     icon: Layers3,
-    title: 'Integrated Travel Tools',
-    desc: 'Everything you need, built-in. Track expenses, manage your budget, and follow custom packing lists without leaving the system.',
+    title: 'No more travel juggling',
+    desc: 'Track expenses, manage packing, and stay organized — without switching between apps mid-trip.',
   },
   {
     id: 'ai-assistant',
     icon: Zap,
-    title: 'AI Travel Assistant',
-    desc: 'A partner who knows your vibe. Our AI learns your taste to provide real-time suggestions, ensuring every detour is worth the drive.',
+    title: 'Plans that adapt',
+    desc: 'Weather changes, delays happen — your trip adjusts in real time so you don’t have to.',
   },
 ];
 
@@ -51,17 +51,17 @@ export const WhatIsUnmapped = () => {
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-2 w-2 rounded-full bg-[#c5a383] animate-pulse" />
                 <span className="text-[9px] uppercase tracking-[0.4em] text-white/50 font-bold">
-                  System Active
+                  LIVE TRIP
                 </span>
               </div>
               
               <p className="font-serif italic text-lg text-white/90 leading-tight mb-6">
-                "Every detail unified. Every mile managed."
+                "Everything in sync. Just focus on the journey."
               </p>
               
               <div className="flex justify-between items-center border-t border-white/10 pt-4">
                 <p className="text-[9px] text-[#c5a383] font-mono tracking-[0.2em]">
-                  OS SYNC // 24/7
+                  SYNCED // REAL-TIME
                 </p>
                 <div className="flex gap-1.5">
                   <div className="w-1.5 h-1.5 rounded-full bg-white/40" />
@@ -76,17 +76,17 @@ export const WhatIsUnmapped = () => {
             <div className="space-y-8">
               <div className="space-y-3">
                 <span className="text-[11px] uppercase tracking-[0.5em] text-black/30 font-bold block">
-                  India's First Travel OS
+                  A better way to travel
                 </span>
                 <h2 className="font-serif italic font-light text-5xl md:text-8xl text-[#1a2e1a] tracking-tighter leading-[0.95]">
-                  Managed <br />
-                  <span className="text-black/20">not just planned.</span>
+                  Your trip,<br />
+                  <span className="text-black/20">without the chaos.</span>
                 </h2>
               </div>
 
-              {/* FIXED SYNTAX HERE: Added closing tags */}
-              <p className="font-sans text-xl text-black/50 leading-relaxed max-w-md">
-                Unmapped is the single platform that unifies every step of your trip. From the first spark of an idea to the final mile back home, all roads lead here.
+              <p className="font-sans text-base text-black/50 leading-relaxed max-w-md">
+                No more digging through emails, switching apps, or second-guessing plans. 
+                Everything is where it should be — exactly when you need it.
               </p> 
             </div>
 
@@ -94,7 +94,10 @@ export const WhatIsUnmapped = () => {
               {features.map((item) => {
                 const FeatureIcon = item.icon;
                 return (
-                  <div key={item.id} className="flex gap-6 group items-start border-l-2 border-transparent hover:border-[#c5a383]/40 pl-6 transition-all duration-300">
+                  <div 
+                    key={item.id} 
+                    className="flex gap-6 group items-start border-l-2 border-transparent hover:border-[#c5a383]/40 pl-6 transition-all duration-300 hover:translate-x-1"
+                  >
                     <div className="shrink-0 mt-1 text-[#1a2e1a]/40 group-hover:text-[#1a2e1a]">
                       <FeatureIcon size={20} strokeWidth={1.5} />
                     </div>
@@ -111,7 +114,6 @@ export const WhatIsUnmapped = () => {
               })}
             </div>
           </div>
-          {/* ── END CONTENT ── */}
 
         </div>
       </div>
