@@ -121,9 +121,19 @@ export const Destinations = () => {
                     <p className="text-[10px] uppercase tracking-widest text-[#c5a383] mb-2">
                       Limited slots available
                     </p>
-                    <button className="w-full py-2 text-sm border border-black/20 rounded-lg hover:bg-black hover:text-white transition">
-                      Request Access
-                    </button>
+                    <a
+  href={GOOGLE_FORM_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full inline-flex items-center justify-center py-3 text-sm tracking-wide 
+             border border-black/10 rounded-xl 
+             bg-white text-[#0a120a] 
+             hover:bg-[#0a120a] hover:text-white 
+             transition-all duration-300 ease-out
+             shadow-[0_2px_10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)]"
+>
+  Start this journey →
+</a>
                   </div>
                 )}
               </div>
