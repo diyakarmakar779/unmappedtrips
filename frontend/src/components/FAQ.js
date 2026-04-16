@@ -8,28 +8,32 @@ import {
 
 const faqs = [
   {
-    q: 'What exactly is a "Travel OS"?',
-    a: 'Most people travel with their plans scattered across ten different apps. Unmapped brings your flights, hotels, and daily plans into one single home. It’s a "Command Center" for your trip that keeps everything simple and in one place.',
+    q: 'What is Unmapped exactly?',
+    a: 'Unmapped is a Travel OS + concierge. We organise your entire trip into one clean timeline and personally help manage your bookings, stays, and on-ground flow so you don’t have to.',
   },
   {
-    q: 'How do I get my bookings into Unmapped?',
-    a: "It’s effortless. Just forward your confirmation emails or screenshots to us. We’ll organize the details into your master route so you don’t have to hunt for PDFs or PNRs ever again.",
+    q: 'Do I need to plan everything myself?',
+    a: 'Not at all. You can either share your bookings or just tell us your plan. We help you structure it, improve it, and manage the experience end-to-end.',
   },
   {
-    q: 'Is this just an app or a real person helping me?',
-    a: 'It’s both. Our system handles the organization, but our team personally hand-picks every stay and route. In the Northeast, we stay in the loop to make sure your car arrives and your trip stays smooth.',
+    q: 'How do I share my bookings?',
+    a: 'Simply upload your tickets, forward confirmation emails, or send screenshots. We extract everything and build your trip timeline automatically.',
   },
   {
-    q: 'How do I start?',
-    a: "Fill out the 2-minute brief on our site. We’ll reach out on WhatsApp to understand your style and send you a complete, easy-to-read trip plan within 48 hours.",
+    q: 'Is there real human support?',
+    a: 'Yes. Especially for destinations like Meghalaya and Sikkim, we actively help coordinate stays, routes, and local logistics to keep your trip smooth.',
   },
   {
-    q: 'Can it help with my budget and packing?',
-    a: 'Yes. We have simple tools built-in to track your expenses and give you a custom packing list based on where you’re going. You won’t need to switch between different apps anymore.',
+    q: 'What makes this different from other travel apps?',
+    a: 'Most apps help you discover or book. Unmapped helps you manage the entire trip in one place — from bookings to daily flow to real-time changes.',
   },
   {
-    q: 'Is the first plan really free?',
-    a: 'Yes. We want you to experience what it feels like to have a trip that’s fully organized and managed. Your first personalized route is on us, with no strings attached.',
+    q: 'How do I get started?',
+    a: 'Join the waitlist and fill a short trip brief. We’ll reach out personally and set up your trip inside Unmapped.',
+  },
+  {
+    q: 'Is it free?',
+    a: 'Your first trip setup is free. For deeper concierge support, custom routes, and on-ground coordination, we offer paid plans.',
   },
 ];
 
@@ -49,15 +53,15 @@ export const FAQ = () => {
           <div className="lg:sticky lg:top-32 space-y-6">
             <div className="space-y-2">
                <span className="font-sans text-[11px] uppercase tracking-[0.5em] text-[#c5a383] font-bold">
-                The Protocol
+                Before You Travel
               </span>
               <h2 className="font-serif italic font-light text-5xl md:text-7xl text-white tracking-tighter leading-tight">
-                System <br />
-                <span className="text-white/30">Intelligence.</span>
+                Everything <br />
+                <span className="text-white/30">you need to know.</span>
               </h2>
             </div>
             <p className="font-sans text-white/40 text-sm md:text-base leading-relaxed max-w-sm">
-              One platform to replace the chaos. If you have a specific requirement for your journey, mention it in the brief. We respond to every sync personally.
+              Planning, bookings, and on-ground support simplified into one smooth experience.
             </p>
           </div>
 
