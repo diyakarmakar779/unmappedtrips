@@ -21,6 +21,7 @@ const pillars = [
   },
 ];
 
+
 export const SoftAI = () => {
   return (
     <section
