@@ -105,54 +105,46 @@ export const Hero = () => {
       </button>
 
       {/* Floating WhatsApp Button */}
-      <a
-        href="https://wa.me/918147922283?text=Hey%20Unmapped%2C%20I%27m%20planning%20a%20trip%20and%20wanted%20to%20know%20more."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="
-          fixed
-          bottom-5
-          right-5
-          md:bottom-8
-          md:right-8
-          z-50
-          group
-        "
-      >
-        <div
-          className="
-            flex items-center gap-3
-            bg-[#111]/80
-            backdrop-blur-xl
-            border border-white/10
-            rounded-full
-            px-4 py-3
-            shadow-2xl
-            transition-all duration-300
-            hover:scale-105
-            hover:bg-[#1a1a1a]
-          "
-        >
-          <div className="relative">
-            <div className="absolute inset-0 bg-green-500 rounded-full blur-md opacity-40 animate-pulse" />
+    
+<a
+  href="https://wa.me/918147922283?text=Hey%20Unmapped%2C%20I%27m%20planning%20a%20trip%20and%20wanted%20to%20know%20more."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    fixed
+    bottom-5
+    right-5
+    md:bottom-8
+    md:right-8
+    z-50
+    group
+  "
+>
+  <div
+    className="
+      relative
+      flex items-center justify-center
+      w-14 h-14
+      rounded-full
+      bg-[#111]/80
+      backdrop-blur-xl
+      border border-white/10
+      shadow-[0_8px_30px_rgba(0,0,0,0.35)]
+      transition-all duration-300
+      hover:scale-110
+      hover:bg-[#1a1a1a]
+    "
+  >
+    {/* Glow */}
+    <div className="absolute inset-0 rounded-full bg-green-500/20 blur-xl animate-pulse" />
 
-            <FaWhatsapp
-              size={22}
-              className="relative text-green-400"
-            />
-          </div>
-
-          <div className="hidden sm:flex flex-col leading-tight">
-            <span className="text-white text-sm font-medium tracking-tight">
-              Chat with us
-            </span>
-
-            <span className="text-white/40 text-[11px]">
-              Concierge support
-            </span>
-          </div>
-        </div>
-      </a>
+    {/* Icon */}
+    <FaWhatsapp
+      size={26}
+      className="relative text-green-400"
+    />
+  </div>
+</a>
     </section>
   );
 };
