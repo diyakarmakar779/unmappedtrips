@@ -118,30 +118,45 @@ export const Destinations = () => {
                 </div>
 
                 {/* CTA (NEW - HIGH IMPACT) */}
-                {dest.status === 'available' && (
-                  <div className="mt-auto pt-4">
-                    <p className="text-[10px] uppercase tracking-widest text-[#c5a383] mb-2">
-                      Limited slots available
-                    </p>
-                    <a
-  href={GOOGLE_FORM_URL}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="w-full inline-flex items-center justify-center py-3 text-sm tracking-wide 
-             border border-black/10 rounded-xl 
-             bg-white text-[#0a120a] 
-             hover:bg-[#0a120a] hover:text-white 
-             transition-all duration-300 ease-out
-             shadow-[0_2px_10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)]"
->
-  Start this journey →
-</a>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+{dest.status === 'available' && (
+  <div className="mt-auto pt-4">
+    <p className="text-[10px] uppercase tracking-widest text-[#c5a383] mb-2">
+      Limited slots available
+    </p>
+
+    {dest.name === 'Meghalaya' && (
+      <a
+        href="https://wa.me/918147922283?text=Hi%2C%20I%27m%20interested%20in%20a%20Meghalaya%20trip%20with%20Unmapped"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full inline-flex items-center justify-center py-3 text-sm tracking-wide 
+                   border border-black/10 rounded-xl 
+                   bg-white text-[#0a120a] 
+                   hover:bg-[#0a120a] hover:text-white 
+                   transition-all duration-300 ease-out
+                   shadow-[0_2px_10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)]"
+      >
+        Start this journey →
+      </a>
+    )}
+
+    {dest.name === 'Sikkim' && (
+      <a
+        href="https://wa.me/918147922283?text=Hi%2C%20I%27m%20interested%20in%20a%20Sikkim%20trip%20with%20Unmapped"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full inline-flex items-center justify-center py-3 text-sm tracking-wide 
+                   border border-black/10 rounded-xl 
+                   bg-white text-[#0a120a] 
+                   hover:bg-[#0a120a] hover:text-white 
+                   transition-all duration-300 ease-out
+                   shadow-[0_2px_10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)]"
+      >
+        Start this journey →
+      </a>
+    )}
+  </div>
+)}
 
         {/* Footer */}
         <div className="mt-24 text-center">
