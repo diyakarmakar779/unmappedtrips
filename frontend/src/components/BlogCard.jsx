@@ -7,35 +7,26 @@ export const BlogCard = ({ post }) => {
       to={`/journal/${post.slug}`}
       className="group block"
     >
-      <article className="overflow-hidden rounded-[2rem] bg-white border border-black/[0.04] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+      <article className="border-b border-black/10 py-10 transition-all duration-300 hover:translate-x-2">
 
-        <div className="relative overflow-hidden h-[420px]">
-          <img
-            src={post.image}
-            alt={post.title}
-            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-          />
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-
-          <div className="absolute bottom-0 p-8">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-white/60 mb-3">
+          <div className="max-w-2xl">
+            <p className="text-[10px] uppercase tracking-[0.35em] text-black/30 mb-4">
               {post.location}
             </p>
 
-            <h3 className="font-serif italic text-3xl text-white leading-tight">
+            <h3 className="font-serif italic text-3xl md:text-5xl text-[#0a120a] leading-tight group-hover:opacity-70 transition-opacity">
               {post.title}
             </h3>
+
+            <p className="mt-6 text-black/50 leading-relaxed text-sm md:text-base max-w-xl">
+              {post.excerpt}
+            </p>
           </div>
-        </div>
 
-        <div className="p-8">
-          <p className="text-sm text-black/50 leading-relaxed">
-            {post.excerpt}
-          </p>
-
-          <div className="mt-6 text-sm text-[#c5a383] tracking-wide">
-            Read Journal →
+          <div className="text-sm text-[#c5a383] whitespace-nowrap pt-2">
+            Read →
           </div>
         </div>
       </article>
