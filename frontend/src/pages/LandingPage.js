@@ -30,7 +30,7 @@ export default function LandingPage() {
       <Destinations />
 
       {/* NEW JOURNAL SECTION */}
-      <JournalPreview />
+      // <JournalPreview />
 
       <FAQ />
 
