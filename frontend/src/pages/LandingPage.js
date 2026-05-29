@@ -6,6 +6,7 @@ import { HowItWorks } from '../components/HowItWorks';
 import { WhyDifferent } from '../components/WhyDifferent';
 import { SoftAI } from '../components/SoftAI';
 import { Destinations } from '../components/Destinations';
+import { JournalPreview } from '../components/JournalPreview';
 import { EarlyAccess } from '../components/EarlyAccess';
 import { FAQ } from '../components/FAQ';
 import { FinalCTA } from '../components/FinalCTA';
@@ -19,11 +20,20 @@ export default function LandingPage() {
   return (
     <main className="relative overflow-x-hidden bg-background">
       <Navbar />
+
       <Hero />
+
       <WhatIsUnmapped />
+
       <HowItWorks />
+
       <Destinations />
+
+      {/* NEW JOURNAL SECTION */}
+      <JournalPreview />
+
       <FAQ />
+
       <Footer />
     </main>
   );
