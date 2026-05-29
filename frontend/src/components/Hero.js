@@ -46,7 +46,7 @@ export const Hero = () => {
         {/* Badge */}
         <div className="mb-8 animate-fade-in">
           <span className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase tracking-[0.25em] font-medium text-white/80 backdrop-blur-md">
-            Now Curating: Northeast India
+            Curated journeys across India
           </span>
         </div>
 
