@@ -2,6 +2,8 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import LandingPage from './pages/LandingPage';
+import JournalPage from './pages/JournalPage';
+import BlogPostPage from './pages/BlogPostPage';
 
 function App() {
   return (
