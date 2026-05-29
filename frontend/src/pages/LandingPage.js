@@ -29,9 +29,6 @@ export default function LandingPage() {
 
       <Destinations />
 
-      {/* NEW JOURNAL SECTION */}
-      // <JournalPreview />
-
       <FAQ />
 
       <Footer />
