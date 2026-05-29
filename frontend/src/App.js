@@ -9,6 +9,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+    {/* Journal Page */}
+        <Route path="/journal" element={<JournalPage />} />
+
+        {/* Dynamic Blog Post */}
+        <Route path="/journal/:slug" element={<BlogPostPage />} />
         </Routes>
       </BrowserRouter>
       <Analytics />
